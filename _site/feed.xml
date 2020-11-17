@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>스마일 다이어리</title>
+    <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 17 Nov 2020 23:42:48 +0900</pubDate>
+    <lastBuildDate>Tue, 17 Nov 2020 23:42:48 +0900</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>구글 애널리틱스 4(Google Analytics 4)를 알아본 뒤, 구글 태그 매니저 없이 세팅해보고 내부 IP를 제거해보자</title>
+        <description>&lt;p&gt;안녕하세요 오늘은 ‘최고의 디지털 마케팅 취업 교육 마개팅 취업스쿨’ 글을 보고 디지털 마케터를 준비하는 취준생뿐만 아니라 현직자에게도 많은 질문이 들어왔던 구글 애널리틱스 4(google analytics 4)에 대해 한 번 얘기해보고 실제로 설정하는 방법 그리고 많은 분이 궁금해하는 내부 IP를 필터링하는 방법까지 알아보려고 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;이제-취업하려면-구글-애널리틱스-4google-analytics-4도-알아야-할까요&quot;&gt;이제 취업하려면 구글 애널리틱스 4(google analytics 4)도 알아야 할까요?&lt;/h2&gt;
+
+&lt;p&gt;디지털 마케터를 꿈꾸는 취준생이라면 충분히 가질만한 의문이라고 생각합니다. &lt;br /&gt;당장 구글 애널리틱스 4(google analytics 4)가 취업을 당락 하는 중요한 요소는 되지 않을 것입니다. 구글 애널리틱스 4는 현재 발표된 지 얼마 되지 않았으며 현직자들도 이제야 공부를 시작하고 있고 저번에 말했듯이 아직 영어든 한글이든 자료가 많은 상태는 아닙니다.&lt;br /&gt;
+또한 구글에서도 아직 구글 애널리틱스 4가 완벽하지 않기 때문에 기존에 사용하고 있는 유니버설 구글 애널리틱스(Universal Google Analytics)를 함께 사용하는 것을 권장하고 있습니다.&lt;br /&gt;
+그러니 취준생이라면 우선 기존 구글 애널리틱스인 유니버설 구글 애널리틱스를 충분히 학습하고 구글 애널리틱스 4로 넘어가세요. 당장 신입에게 필수적인 요소로 구글 애널리틱스 4를 원하는 회사는 많지 않을테니까요&lt;/p&gt;
+
+&lt;h2 id=&quot;그래서-구글-애널리틱스-4google-analytics-4가-뭔가요&quot;&gt;그래서 구글 애널리틱스 4(google analytics 4)가 뭔가요?&lt;/h2&gt;
+
+&lt;p&gt;2013년 처음 유니버설 구글 애널리틱스(Universal google analytics)가 생겼을 때는 SDK 또는 GTM SDK를 설치하여 애널리틱스에서 앱을 추적하는 기능을 도입했었습니다. 하지만 이는 모바일 앱 분석에는 적합하지 않았고 2016년 구글은 앱 트래픽을 추적하기 위한 권장 및 기본 방법으로 파이어베이스 용 구글 애널리틱스를 출시했습니다. 이를 통해 좀 더 앱과 관련된 보고서와 지표를 제공했지만, 앱 데이터와 웹 데이터를 결합하여 분석하는 데는 큰 구멍이 있었습니다.&lt;br /&gt;
+그래서 2019년 베타로 출시한 것이 바로 ‘앱+웹’ 속성이고 구글 애널리틱스 4(google analytics 4)는 이 ‘앱+웹’ 시스템과 같은 플랫폼에 구축되었습니다.&lt;br /&gt;
+모바일 앱 분석을 위한 플랫폼인 파이어베이스의 프레임워크와 아키텍처에 기반하여 웹과 앱 모두 분석 가능하게 만들었기 때문에 구글 애널리틱스 4에서는 기기에 초점을 맞추지 않고 사용자에게 초점을 맞춰 여러 기기를 통한 고객의 여정을 더 정확하게 추적하는 것이 가능해졌습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;웹만-사용하는-서비스라면-굳이-구글-애널리틱스-4google-analytics-4를-사용할-필요가-없을까요&quot;&gt;웹만 사용하는 서비스라면 굳이 구글 애널리틱스 4(google analytics 4)를 사용할 필요가 없을까요?&lt;/h2&gt;
+
+&lt;p&gt;구글에서는 모바일 앱이 없더라도 유니버설 구글 애널리틱스(Universal google analytics)와 함께 구글 애널리틱스 4(google analytics 4) 속성을 사용할 것을 권장합니다. 구글이 언제 유니버설 구글 애널리틱스에 대한 지원을 끊을지 알 수 없기 때문에 가능한 한 빨리 데이터를 축적할 것을 권장하고 있습니다.&lt;br /&gt;
+또한 구글 애널리틱스 4는 쿠키나 식별 데이터가 없어도 추적이 가능하도록 설계가 되어있습니다. 이는 점점 쿠키를 사용하여 세션을 추적하거나 사용자를 특정하는 것에 점점 인색해지고 있는 상황에서 좀 더 정확한 데이터를 모으고 분석하는 것을 가능하게 해줍니다.&lt;br /&gt;
+마지막으로 구글 애널리틱스 4는 유니버설 구글 애널리틱스와 달리 매개변수를 활용하여 더 많은 정보를 이벤트에 포함하는 것이 가능해졌습니다. 마케팅 취업스쿨에서 강의를 하시고 &lt;strong&gt;웹 지식을 이해하는 디지털 마케팅 스터디&lt;/strong&gt;인 마개이너를 운영하시는 오경석 님은 항상 기존 구글 애널리틱스의 구조가 매우 제한적이라고 말씀하셨는데 새로 나온 구글 애널리틱스 4는 이런 문제를 완벽하게 해결했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;기존 유니버설 구글 애널리틱스에서의 이벤트&lt;/strong&gt;&lt;br /&gt;
+기존의 이벤트는 히트의 구글 애널리틱스 히트의 유형 중 하나이며 카테고리, 액션, 라벨, 값만을 포함할 수 있도록 구성되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;새로운 구글 애널리틱스 4에서의 이벤트&lt;/strong&gt;&lt;br /&gt;
+구글 애널리틱스 4에서 모든 히트는 이벤트입니다. 기존 유니버설 구글 애널리틱스의 페이지 뷰는 구글 애널리틱스 4에서 페이지 뷰 이벤트로 불려야 합니다. 더는 히트 타입에 구분이 없고 모든 이벤트는 동등하게 취급됩니다. &lt;br /&gt;이벤트 내에 카테고리, 액션, 라벨, 값이 아닌 &lt;strong&gt;매개변수로 4개를 초과하는 정보를 이벤트에 저장할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 새로 바뀐 이벤트의 개념과 사용 방법 때문에 디지털 마케팅에서의 ‘이벤트’, ‘매개변수’에 대한 이해가 없으면 구글 애널리틱스 4를 온전하게 활용하기 어렵고 이 때문에 구글 애널리틱스 4가 접근하기 어렵다는 얘기가 나오고 있습니다. &lt;br /&gt;마개팅 취업스쿨과 마개이너에서는 이 ‘이벤트’와 ‘매개변수’를 매우 중요하게 여겨왔기 때문에 구글 애널리틱스 4가 생기기 이전부터 커리큘럼에 포함되어 있었습니다. &lt;br /&gt;원래 저에게 이 지식을 나눠주신 오경석 님이 이벤트와 매개변수에 대한 글을 쓰는 것을 허락하셨기 때문에 다음에는 ‘이벤트’와 ‘매개변수’에 대한 이해를 높일 수 있는 글을 준비해볼게요.&lt;/p&gt;
+
+&lt;h2 id=&quot;구글-태그매니저-없이-구글-애널리틱스-4google-analytics-4-설정하는-법&quot;&gt;구글 태그매니저 없이 구글 애널리틱스 4(Google Analytics 4) 설정하는 법&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;기존에 가지고 있던 구글 애널리틱스에 접속하여 가장 하단에 있는 톱니바퀴를 눌러 관리페이지에 들어간 뒤 속성 만들기를 클릭합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step1.png&quot; alt=&quot;구글 애널리틱스 4 세팅 1단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;속성 이름에 자신이 원하는 이름을 입력하고 보고 시간대와 통화를 대한민국에 맞게 바꿔줍니다.&lt;br /&gt;현재 구글에서 새로 만드는 속성은 구글 애널리틱스 4를 기본으로 적용하고 있습니다. 만약 기존의 유니버설 구글 애널리틱스를 만들기를 원한다면 고급 옵션 보기를 눌러 만드시면 됩니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step2.png&quot; alt=&quot;구글 애널리틱스 4 세팅 2단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;다음을 누르면 비즈니스 정보를 입력하는 곳이 나오는데 이곳은 자신의 목적에 맞게 선택지를 정하고 넘어가면 되겠습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step3.png&quot; alt=&quot;구글 애널리틱스 4 세팅 3단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;만들기를 누르면 구글 애널리틱스 4 속성이 만들어집니다. 보기가 없어서 당황하는 분들이 있는데 구글 애널리틱스 4에서는 보기가 없어지고 계정과 속성만이 존재합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step4.png&quot; alt=&quot;구글 애널리틱스 4 세팅 4단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;구글 애널리틱스 4에는 데이터 스트림이라는 것이 존재합니다. 데이터 스트림은 속성에 사용되는 데이터 소스입니다. 데이터 스트림에 내가 가진 플랫폼을 등록하는 것이 구글 애널리틱스 4에서 데이터를 추적하기 위한 첫걸음입니다. &lt;br /&gt;현재는 웹만 사용하고 있기 때문에 웹을 선택해보겠습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step5.png&quot; alt=&quot;구글 애널리틱스 4 세팅 5단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;웹을 눌러 들어가면 다음과 같은 화면이 보입니다. 자신의 도메인을 입력하고 향상된 측정을 활성화합니다. 향상된 측정은 웹 데이터 스트림에만 적용되는 기능이며 구글 애널리틱스 4에서는 이를 통해 페이지 조회, 스크롤, 클릭, 사이트 검색, 동영상 반응, 파일 다운로드와 같은 행동을 자동으로 추적할 수 있습니다.&lt;br /&gt;단순히 행동만 추적하는 것이 아닌 매개변수도 자동으로 수집되어 행동에 대한 자세한 정보도 파악이 가능합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step6.png&quot; alt=&quot;구글 애널리틱스 4 세팅 6단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;스트림을 만들면 다음과 같은 화면이 보입니다. 기존에 구글 애널리틱스를 사용한 적이 없으시다면 ‘새로운 온페이지 태그 추가’를 눌러 나오는 코드를 복사하여 사이트의 head에 붙여넣습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step7.png&quot; alt=&quot;구글 애널리틱스 4 세팅 7단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;저처럼 기존 유니버설 구글 애널리틱스를 사용하는 분이라면 기존 온페이지 태그 사용을 누릅니다. 매우 친절하게 어떻게 하는지 설명이 되어있으니 한 번 따라 해보겠습니다. 측정 ID는 복사하고 이동하세요!&lt;br /&gt;
+구글태그매니저를 이용하는 경우에는 기존에 구글태그매니저를 사용하는 사람이면 세팅하기 어렵지 않게 설명이 되어있으니 설명을 바탕으로 구글 애널리틱스 4 기본 태그를 만들어보세요&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step8.png&quot; alt=&quot;구글 애널리틱스 4 세팅 8단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;유니버설 구글 애널리틱스의 속성으로 이동하여 추적 정보의 추적 코드로 들어가 연결된 사이트 태그를 클릭합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step9.png&quot; alt=&quot;구글 애널리틱스 4 세팅 9단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;연결할 태그 ID에 구글 애널리틱스 4에서 복사해온 ID를 넣습니다. 닉네임은 선택사항이므로 꼭 넣으시지 않아도 됩니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step10.png&quot; alt=&quot;구글 애널리틱스 4 세팅 10단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;연결을 누르면 기존에 만들었던 구글 애널리틱스 4 속성에 연결된 것을 확인하실 수 있습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step11.png&quot; alt=&quot;구글 애널리틱스 4 세팅 11단계&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이제 잘 연결되었는지 확인해볼까요? 구글 애널리틱스 4 속성으로 돌아가 자신의 웹사이트에 접속하고 실시간 보고서에 들어갑니다. 정상적으로 연결이 되었다면 실시간에서 다음과 같이 보고서를 확인하는 것이 가능합니다.&lt;br /&gt;기존 실시간 보고서와 다르게 별다른 조작 없이 많은 정보를 확인할 수 있음을 아실 수 있을 겁니다. 따로 이벤트를 심지 않았는데 향상된 측정과 자동으로 수집되는 이벤트들이 잡히는 것을 확인할 수 있습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_setting_step12.png&quot; alt=&quot;구글 애널리틱스 4 세팅 12단계&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;해당 이벤트 관련해서는 구글의 공식 가이드 링크를 걸어드릴 테니 보고 참고해주세요&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://support.google.com/analytics/answer/9216061?hl=ko&amp;amp;ref_topic=9756175&quot;&gt;구글 애널리틱스 4 공식가이드&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;잠깐!!!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;구글 애널리틱스 4에서 보기와 필터가 없어졌다고 내부 트래픽 제한이 불가능하다는 말이 있는데 이는 전혀, 틀린 말입니다. 자신의 웹 데이터 스트림 내부에서 태그 설정을 누르면 내부 트래픽을 정의할 수 있는 곳이 나옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_ip_filter.png&quot; alt=&quot;구글 애널리틱스 4 내부 ip 필터 제거 step1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 내부 트래픽 정의에 들어가면 아래와 같이 내부 IP를 필터링 할 수 있는 설정 창이 뜹니다. 여기에서 ‘내 IP 주소 알아보기’를 눌러 제거하고 싶은 IP를 제거하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_ip_filter_2.png&quot; alt=&quot;구글 애널리틱스 4 내부 ip 필터 제거 step2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;여기서 하나 더 주의점이 있는데요! 구글 애널리틱스 4에서는 보기에 필터가 걸리는 것이 아니기 때문에 내부 IP를 제거한다고 실시간 데이터가 잡히지 않는다거나 하지 않습니다. 아래의 사진을 보시면 좀 더 이해가 쉬울 겁니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/07/google_analytics_four_ip_filter_3.png&quot; alt=&quot;구글 애널리틱스. 4 내부 ip 필터 제거 step3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;구글 애널리틱스 4에서는 이미지에 써져있는 것처럼 내부 트래픽은 하나의 측정기준으로서 존재합니다. 유니버설 구글 애널리틱스를 쓰신 분은 측정기준의 요소로 데이터를 필터링하는 것이 가능하다는 걸 아실 겁니다.&lt;br /&gt;
+이와 마찬가지로 구글 애널리틱스 4 분석허브에서 새로운 보고서를 만들 때 필터에서 기본으로 정의되어있는 ‘테스트 데이터 필터 이름’ 측정기준을 골라 조건으로 &lt;strong&gt;다음을 포함하지 않음&lt;/strong&gt;을 선택하고 &lt;strong&gt;Internal Traffic&lt;/strong&gt;을 넣으면 내부 트래픽으로 설정해 놓은 IP에서의 활동이 제거된 데이터로 확인이 가능해집니다.&lt;/p&gt;
+
+&lt;p&gt;오늘은 구글 애널리틱스 4(google analytics 4)가 무엇인지 왜 사용해야 하는지 어떻게 설치하는지 그리고 어떻게 내부 트래픽을 제외하고 활용하는지에 대해 알아봤습니다. &lt;br /&gt;다음 글은 구글 애널리틱스 4를 본격적으로 사용하기 위한 이벤트와 매개변수에 대해 다뤄볼 예정이니 스마일 다이어리를 잊지 말아 주세요!&lt;br /&gt;감사힙니다:-)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2020 23:05:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</guid>
+        
+        <category>marketingstory</category>
+        
+        <category>구글애널리틱스_4</category>
+        
+        <category>디지털마케팅</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>최고의 디지털 마케팅 취업 교육 '마개팅 취업스쿨'</title>
+        <description>&lt;p&gt;안녕하세요 오늘은 이 전에 말씀드렸던 것처럼 마땅한 학원, 교육자가 없어서 탄생하는 데는 오래 걸렸지만, 최고의 강사님과 함께하게 된 소득공유후불제 디지털 마케팅 취업 교육 ‘마개팅 취업스쿨’에 대해 이야기해보려고 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;소득공유후불제란&quot;&gt;소득공유후불제란?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/06/growth.jpg&quot; alt=&quot;성장하는 새싹&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;소득공유후불제(ISA)는 외국에서는 Income Share agreements를 번역한 말입니다. 노벨상 수상 경제학자인 밀턴 프리드먼이 고안한 방법이며 학생들의 &lt;strong&gt;교육비 부담을 덜어주기 위해&lt;/strong&gt; 제시된 방법입니다. 소득공유후불제 모델에서는 학생들을 ‘&lt;strong&gt;분명한 성장 가능성이 있는 투자 대상’&lt;/strong&gt;으로 해석합니다.&lt;br /&gt;
+무엇을 보고 투자할까요? 신용도? 그 사람의 과거 이력? 둘 다 아닙니다. 소득공유후불제는 미래의 잠재력(성장 가능성)을 기반으로 실현됩니다.&lt;br /&gt;그럼 어떻게 교육비를 덜어줄까요?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/06/divide_pie.jpg&quot; alt=&quot;소득을 나누듯 파이를 나누다&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;소득공유후불제 제도를 도입한 교육은 &lt;strong&gt;선불 교육비 없이 배우고, 취업 후에 소득의 일부를 정해진 %에 맞게 공유&lt;/strong&gt;합니다. 소득이 없을 때는 교육비를 낼 의무가 없기 때문에 정해진 날부터 갚아야 하는 대출과는 다른 성격을 가지고 있습니다. &lt;br /&gt;또한 학생이 취업해야 학원에 수익이 발생하고 학생이 높은 소득을 받을수록 학원의 수익도 커지기 때문에 &lt;strong&gt;높은 교육의 질을 보장&lt;/strong&gt;할 수밖에 없습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;기나긴-탐색의-시간&quot;&gt;기나긴 탐색의 시간&lt;/h2&gt;
+
+&lt;p&gt;위에서 언급했듯이 소득공유후불제로 제공하는 직무교육을 선택하는 데 가장 중요한 것은 교육의 질입니다. 수강생이 취업해야 학원과 학생독립만세에 수익이 발생하기 때문에 높은 취업률이 보장되지 못하는 교육의 질이라면 소득공유후불제를 제공할 수 없습니다.&lt;br /&gt;
+그래서 디지털 마케팅 소득공유후불제 교육을 시장에 만들겠다고 생각한 때부터 항상 염두에 두고 있는 분이 있었으나 가능성이 떨어진다 생각했었습니다.&lt;br /&gt;
+열심히 찾아봤으나 그분에 버금가는 학원이나 강사님을 찾을 순 없었습니다.&lt;br /&gt;
+고착상태에 빠져있었던 그때, 어떤 일이 발생했습니다!&lt;/p&gt;
+
+&lt;h2 id=&quot;마침내-탄생한-마개팅-취업스쿨&quot;&gt;마침내 탄생한 마개팅 취업스쿨&lt;/h2&gt;
+
+&lt;p&gt;추석쯤 그분이 운영하시는 오픈소스마케팅이란 방에 다른 학원에 대한 질문이 올라왔습니다. 질문자를 보니 다른 멤버가 아닌 그분의 질문이었습니다.&lt;br /&gt;
+직감적으로 ‘저 학원에서 강의하시려고 한다’ 생각해서 명절임에도 바로 COO에게 전화를 걸어 상황을 설명하고 제안 메일을 보내라고 닦달했습니다.&lt;br /&gt;(나중에 알고 보니 강의를 하려고가 아니라 다른 이유로 찾으신 거긴 했습니다)&lt;br /&gt;
+우려했던 바와 다르게 거의 바로 미팅이 잡혔고 미팅 당일 그렇게 원하고 원하던 오경석 대표님이 학생독립만세의 디지털 마케팅 교육을 진행해주시기로 결정이 났습니다!&lt;br /&gt;(추후 들어보니 COO는 미팅 전날 미팅하는 곳 옆에서 숙박했다고…)&lt;/p&gt;
+
+&lt;h2 id=&quot;마개팅-취업스쿨-소개&quot;&gt;마개팅 취업스쿨 소개&lt;/h2&gt;
+
+&lt;p&gt;디지털 마케팅과 함께 앞서 다른 글에서 언급했던 디지털마케팅 업무를 수행하는데 필요한 html/css, Javascript를 배우기 때문에 마개팅 취업스쿨로 이름이 정해졌습니다.&lt;br /&gt;
+마개팅 취업스쿨의 커리큘럼은 현직자들이 앞다퉈 들어가려고 줄 서고 현재 제가 참여하고 있는 &lt;strong&gt;마개이너 스터디의 커리큘럼과 같습니다.&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ogaeng.com/introduce-mgin/&quot;&gt;마개이너 스터디 소개글&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;디지털 마케팅을 모르는 취업준비생을 위한 강의라고 기초 이론과 사용 방법만으로 이루어진 강의가 아닌 현직자도 제대로 배우고 싶어 하는 &lt;strong&gt;업무에 꼭 필요한 지식과 실습&lt;/strong&gt;으로 이루어져 있습니다.&lt;br /&gt;
+그래서 마개팅 취업스쿨의 강의는 다른 강의들에 비해 짧습니다. &lt;strong&gt;불필요하게 시간을 잡아먹는 기초 세팅 같은 것은 과감하게 과제로 대체&lt;/strong&gt;했기 때문입니다. 굳이 강의에서 같이하지 않아도 될 스스로 해봐야 하는 부분은 과제로 대체하여 스스로 해당 툴에 대한 이해를 높이고 학습하는 방향을 권장합니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/06/puppet.jpg&quot; alt=&quot;꼭두각시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다 알려주고 학생도 편히 배우고 강의 시수를 늘려 학원비를 더 받는 방법도 있겠지만 그런 방향은 철저히 지양합니다. 그런 교육은 배운 것만 할 줄 아는 꼭두각시를 양성하기 때문입니다.&lt;br /&gt;&lt;strong&gt;스스로 학습할 수 있는 능력, 스스로 생각할 수 있는 능력&lt;/strong&gt;이 없다면 여러 경우의 수가 존재하고 트랜드가 수시로 바뀌는 디지털마케팅 분야에서 도태될 뿐입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;지속적으로-발전하는-마개팅-취업스쿨&quot;&gt;지속적으로 발전하는 마개팅 취업스쿨&lt;/h2&gt;
+
+&lt;p&gt;마개팅 취업스쿨은 한 기수 한 기수 끝날 때마다 심지어 강의를 진행하는 와중에도 계속해서 발전하는 디지털 마케팅 취업 교육입니다. 이것이 가능한 이유는 &lt;strong&gt;오경석 강사님&lt;/strong&gt; 때문입니다.&lt;br /&gt;
+실제로 오경석 강사님이 현직자를 대상으로 운영하는 마개이너 스터디도 매기수 배우는 것이 다르고 풍부해진다고 할 만큼 빠르게 발전하고 있습니다. 마개팅 취업스쿨 역시 학생의 피드백을 통해 얻은 정보뿐만 아니라 강의를 하는 &lt;strong&gt;과정을 통해 얻은 개선점도 바로바로 실시간으로 적용&lt;/strong&gt;해주십니다.&lt;br /&gt;
+그래서 10월 19일에 시작한 마개팅 취업스쿨 3기에는 기존 GA와 함께 업그레이드된 &lt;strong&gt;GA4 강의도 함께 진행&lt;/strong&gt;될 예정입니다. 이미 경석님은 누구보다 빠르게 GA4를 활용하고 전파하고 계십니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ogaeng.com/godomall-ga4-ecommerce-setting/&quot;&gt;오경석 강사님이 작성한 따끈따끈한 GA4 관련 게시물&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3기 학생은 취준생임에도 기존 GA 외에 GA4를 경험하고 새로 바뀐 형식으로 GA 이벤트를 설정할 줄 아는 엄청난 인재들이 탄생할 거라 매우 기대가 됩니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;마케팅에 대한 지식이 없는 전공자, 비전공자인데 디지털 마케터가 꿈이고 지름길을 찾고 있다면 ‘마개팅 취업스쿨’은 그 어떤 지름길보다 더 빨리 여러분을 제대로 된 디지털 마케터로 성장시켜드릴 겁니다. &lt;strong&gt;현직자의 스승 오경석 대표님께 배울 기회 꼭 잡으시길 바랍니다.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Oct 2020 20:30:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>디지털 마케터를 꿈꾸는 비전공자들의 궁금증 해결해드릴게요</title>
+        <description>&lt;p&gt;안녕하세요 오늘은 스마일 다이어리를 시작하고 왔던 질문 중 가장 많이 겹쳤던 질문 3개에 대해 정리해보려고 해요. 디지털 마케터를 꿈꾸는 비전공자였던 제가 취업을 준비하면서 가졌던 의문과 크게 다르지는 않았는데요&lt;br /&gt;
+아무래도 같은 질문에 너무 제각각의 답이 있어 저도 취업 준비생 때는 쉽게 답을 내릴 수 없는 질문들이었습니다. 하나씩 알아볼게요!&lt;/p&gt;
+
+&lt;h2 id=&quot;q1-마케팅에-관련된-자격증을-꼭-취득해야-할까요&quot;&gt;Q1. 마케팅에 관련된 자격증을 꼭 취득해야 할까요?&lt;/h2&gt;
+
+&lt;p&gt;A. 비전공자가 아니어도 디지털 마케터를 꿈꾸는 사람이라면 한 번쯤은 해봤을 고민일 겁니다. 결론은 필수는 아니라는 겁니다. 특히 돈 주고 따는 민간 마케팅 자격증은 굳이 딸 필요 없다고 생각합니다. &lt;br /&gt;디지털 마케터가 꿈이라면 자격증을 따려고 공부하는 시간에 지금 내 SNS에 뜨는 광고나, 컴퓨터 사이트에 뜨는 배너 광고를 보면서 ‘이 광고가 전달하고자 하는 바는 뭘까?’ ‘어떤 고객을 노린 광고이기에 나한테 보였을까?’, ‘해당 광고에서 좋았던 부분’, ‘해당 광고에서 나빴던 부분’ 등을 정리하면서 &lt;strong&gt;추후 콘텐츠 기획에 도움 될 능력을 기르는 게 낫습니다.&lt;/strong&gt; 그렇게 정리된 노트 또는 자료는 입사 지원 시 나를 어필할 수 있을 뿐만 아니라 현업에 가서도 훌륭한 레퍼런스 자료로 사용될 테니까요.&lt;/p&gt;
+
+&lt;h2 id=&quot;q2-비전공자인데-학력도-좋지-않습니다-괜찮을까요&quot;&gt;Q2. 비전공자인데 학력도 좋지 않습니다. 괜찮을까요?&lt;/h2&gt;
+
+&lt;p&gt;A. &lt;strong&gt;디지털 마케터는 다른 마케팅 직종에 비해 상대적으로 학력의 영향을 덜 받는다&lt;/strong&gt;고 생각해요. 디지털 마케터를 원하는 기업의 형태는 인하우스의 경우 스타트업이 많은데 스타트업은 학력을 합격, 불합격의 요소로 여기지 않는 경우가 많으며 공고도 학력무관으로 올라오는 경우도 많습니다.&lt;br /&gt; 알고 지내는 디지털 마케터 지인들 중 전문대를 졸업하고도 디지털 마케터로 잘 일하고 있는 사람들도 많이 있고 고졸로 일찍부터 중소 대행사에서 일을 시작해 20대 중반임에도 스타트업의 팀장으로 훌륭히 일하고 있는 사람들도 많습니다.&lt;br /&gt;
+다만 경력직의 경우도 큰 중견기업이나, 보수적인 일반기업의 경우 대졸 학력을 요구하는 경우는 있기 때문에 자신의 목표에 따라 취업 후 학위를 취득할 필요는 있습니다.&lt;br /&gt;스타트업 공고는 아래 사이트들에서 확인할 수 있으니 몰랐다면 꼭 알아가세요!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.rocketpunch.com/jobs&quot;&gt;로켓펀치&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.wanted.co.kr/wdlist/523/1030?country=kr&amp;amp;job_sort=job.latest_order&amp;amp;years=-1&amp;amp;locations=all&quot;&gt;원티드&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.theteams.kr/results/recruit?search_query=%EB%A7%88%EC%BC%80%ED%8C%85&quot;&gt;더팀스&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;q3-데이터가-중요하다는데-취업을-위해-파이썬이나-r을-공부해야-할까요&quot;&gt;Q3. 데이터가 중요하다는데 취업을 위해 파이썬이나 R을 공부해야 할까요?&lt;/h2&gt;
+
+&lt;p&gt;A. 아니요. &lt;strong&gt;디지털 마케팅에서 사용하는 데이터는 빅데이터에서 정의하는 데이터와는 조금 다릅니다.&lt;/strong&gt; 디지털 마케터는 고객의 행동 데이터를 다룹니다. ‘&lt;strong&gt;고객의 행동 데이터&lt;/strong&gt;‘라고 들으면 아무것도 모르는 분들에게는 막연하게 느껴지실 텐데요. 좀 더 쉽게 설명해 볼게요!&lt;br /&gt;
+디지털 마케터가 광고를 진행하면 고객은 광고와 연결된 웹사이트로 들어가게 됩니다. 광고를 잘못 눌러서 바로 나가버리는 고객들도 있겠지만 광고에 흥미를 느껴서 해당 웹사이트를 둘러보는 고객들도 있을 거예요. &lt;br /&gt;웹사이트를 둘러보는 고객은 단순히 웹사이트를 눈으로 보는 게 아니라 특정 상품을 클릭하거나, 상품 상세페이지 스크롤을 내려보거나, 상품을 장바구니에 담는 등 다양한 행동을 수행합니다. 이런 행동들이 바로 디지털 마케터가 분석해야 하는 데이터입니다.&lt;br /&gt;
+이런 데이터는 파이썬이나 R을 사용할 줄 알아야 수집하고 분석할 수 있는 것이 아닙니다. 웹사이트에서 일어나는 고객의 행동이기 때문에 오히려 &lt;strong&gt;웹사이트를 구성하고 있는 마크업 언어인 html/css와 프로그래밍 언어인 Javascript에 대한 지식&lt;/strong&gt;이 있어야 정확하게 고객의 행동을 추적할 수 있습니다. 그래서 저도 ‘마개이너’라는 현직자 디지털 마케팅 스터디를 통해 열심히 해당 지식을 갈고닦고 있습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;보너스 답변!
+흔히들 GA를 데이터를 분석하기 위한 툴로 아는 경우가 많은데 &lt;strong&gt;GA는 엄밀히 말하자면 고객의 행동을 분석하는 것이 아닌 추적 하고 기록해주는 툴이며 데이터를 분석하는 것은 GA 툴을 사용하는 사람의 몫&lt;/strong&gt;입니다. 그리고 이런 GA 내부에 쌓인 데이터는 엑셀로도 충분히 데이터 분석이 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;제가 질문받았던 것 중에 핵심적인 3개를 추려서 정리해봤는데요. 생각을 정리하는데 꼭 도움이 되었으면 좋겠습니다. 이 외에도 좀 더 많은 질문이 쌓이면 다시 한번 질문을 추려 정리해보도록 할게요.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;디지털 마케터를 꿈꾸는 취준생 여러분 모두 화이팅입니다! 질문도 언제든 환영이니 많이 접수 부탁드려요!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://heejun.kim/contact&quot;&gt;주인장에게 고민 접수하기&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Oct 2020 19:30:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>공모전, 인턴 경험 1도 없는 비전공자 행정학과 학생 디지털 마케터가 되다 (4탄)</title>
+        <description>&lt;p&gt;안녕하세요. 어느덧 ‘공모전, 인턴 경험 하나도 없는1도 없는 행정학과 학생 디지털 마케터가 되다&lt;strong&gt;.&lt;/strong&gt;’ 시리즈의 마지막 글이네요. 오늘 얘기하는 글은 조금은 민감할 수 있는 글이니 참고하고 봐주시길 바랄게요&lt;/p&gt;
+
+&lt;h2 id=&quot;지름길을-선택하다&quot;&gt;지름길을 선택하다&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/04/shortcut.jpg&quot; alt=&quot;복잡한 길을 피하는 지름길&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;제가 디지털 마케터가 되기로 했던 시기는 2017년이었습니다. 당연하게도 당시에는 디지털 마케팅에 대한 정보나 자료가 지금보다 적었습니다. 저는 &lt;strong&gt;졸업 후 바로 취업을 하겠다는 목표&lt;/strong&gt;가 있었는데 당시 외부의 자료만으로는 제가 원하는 속도로 디지털 마케터로 취업하기는 어렵다고 판단이 들었어요. 그래서 학원이라는 지름길을 택했습니다.&lt;br /&gt;390만 원의 돈이 필요했지만 단순한 소비라기보다는 &lt;strong&gt;미래를 위한 투자&lt;/strong&gt;라고 생각했기 때문에 어머니께 ‘제게 390만 원을 투자해주시면 취업한 후 12개월 동안 35만 원씩 갚아 420만 원을 갚겠다’고 약속한 후 돈을 빌려 2017년 9월 전일제 학원 생활을 시작했습니다.&lt;br /&gt;(우스갯소리로 학생독립 만세학생독립만세 팀원들끼리도 학생독립만세보다 어머니가 먼저 ‘먼저 배우고, 취업 후 내는’ 소득공유후불제를 시도하셨다고 말하곤 합니다ㅎㅎ)&lt;/p&gt;
+
+&lt;h2 id=&quot;학원에서-얻은-것&quot;&gt;학원에서 얻은 것&lt;/h2&gt;
+
+&lt;p&gt;학원에는 커리큘럼이 있고 당연하게도 그 커리큘럼을 따라가면 디지털 마케팅 기초 이론, 광고매체, GA, GTM에 대한 기초적인 사용법을 배울 수 있었습니다. &lt;br /&gt;(취준할 당시에는 내가 중급은 되었지 않았겠느냐고 생각했지만 &lt;strong&gt;지금 돌이켜보면 기초적인 것들&lt;/strong&gt;이었습니다) &lt;br /&gt;그리고 기업연계를 통해 &lt;strong&gt;인턴 같은 경험은 아니었지만 30만 원 정도의 예산을 받아 디지털 마케팅 실무를 경험&lt;/strong&gt;할 수 있었어요. &lt;br /&gt;이런 경험들이 비전공자고 공모전, 인턴 경험이 하나도 없던1도 없던 제가 졸업 후 바로 디지털 마케터로 일하게 되는 데 도움이 된 것은 부정할 수 없는 사실입니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/04/coworker.jpg&quot; alt=&quot;든든한 동료들&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;지식과 사용법 외에 얻은 가장 소중한 것은 &lt;strong&gt;사람&lt;/strong&gt;입니다. 전직은 위해 온 형, 누나들이 많았는데 같이 배워가는 입장이었지만 사회생활을 하며 쌓아온 &lt;strong&gt;‘자신의 의견을 주장하는 방법’, ‘상대의 의견을 경청하는 방법’, ‘논리적이고 날카로운 피드백’, ‘기업연계 담당자와의 커뮤니케이션 방법’&lt;/strong&gt; 등 배울 수 있는 것들이 넘쳐났습니다. &lt;br /&gt;같은 목표를 향해 함께 전진하는 든든한 동료로서, 인생의 조력자로서 훌륭한 사람들을 만날 수 있었고 지금도 자주는 아니지만, 분기에 1번은 교류하며 서로의 든든한 버팀목이 되어주고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/04/yes_or_no.jpg&quot; alt=&quot;맞다 또는 틀리다&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;오늘은 조금은 민감할 수 있는 학원 이야기를 해봤습니다. 학원이 비전공자인 제가 디지털 마케터로 취업하는 데 지대한 영향을 끼쳤냐에 대답하자면 &lt;strong&gt;YES&lt;/strong&gt;입니다. 반면에 학원이 없었으면 디지털 마케터로 취업을 하지 못했을 거냐에 대답하자면 그 대답은 &lt;strong&gt;NO&lt;/strong&gt;입니다. 다만 방법을 모르는 상태였기 때문에, 경험이 없었기 때문에 &lt;strong&gt;졸업 이후에 바로 취업을 하지는 못했을 겁니다.&lt;/strong&gt;&lt;br /&gt;학원에 대한 생각은 제각각이지만 저는 &lt;strong&gt;학원은 누군가에게 훌륭한 지름길&lt;/strong&gt;이 되어줄 수 있고 그 때문에 필요하다고 생각합니다. 그것이 제가 학생독립만세에 있는 이유이기도 합니다. 다음 글에서는 학생독립만세에 꼭 있게 하고 싶었지만 다른 과정보다는 오래 걸렸던 디지털 마케팅 취업 교육 과정 &lt;strong&gt;‘마개팅 취업스쿨’&lt;/strong&gt;에 대해 얘기해보려고 합니다.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Sep 2020 12:45:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>공모전, 인턴 경험 1도 없는 비전공자 행정학과 학생 디지털 마케터가 되다 (3탄)</title>
+        <description>&lt;p&gt;벌써 3번째 글이네요. 오늘은 2탄에서 말씀드렸던 대로 제가 디지털 마케터라는 직업을 목표로 가지게 된 계기를 얘기해보려고 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;빅데이터-분석에-발을-들이다&quot;&gt;빅데이터 분석에 발을 들이다&lt;/h2&gt;
+
+&lt;p&gt;2탄의 잇다 질문에서 살짝 노출되었듯이 복학 후 저는 행정학과의 과목 중 SPSS, 사회회귀 분석, 계량 분석 같은 과목을 매우 흥미롭게 들었어요. 그래서 해당 과목을 담당해주신 교수님과 뜻이 맞는 학우들과 데이터 동아리를 만들었어요. 그리고 그 동아리를 통해 사회조사 분석사 2급, 당시 핫했던 데이터 분석 준 전문가(ADSP) 자격증을 한 번에 취득했습니다.(업계에서 일하면서 다른 데이터 분석가분들을 만나보면서 느낀 것은 &lt;strong&gt;자격증은 크게 중요하지 않았다는 것&lt;/strong&gt;)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/03/wellcome_to_hell.jpg&quot; alt=&quot;지옥에 오신 것을 환영합니다&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이를 계기로 빅데이터에 더 큰 관심을 가지게 되었고 취업에 매우 중요한 시기인 4학년 여름방학을 빅데이터 분석 국비 지원 교육을 듣게 되었어요…&lt;/p&gt;
+
+&lt;h2 id=&quot;엉망진창-국비-지원-교육에서-깨달음을-얻다&quot;&gt;엉망진창 국비 지원 교육에서 깨달음을 얻다&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/03/mess_book.jpg&quot; alt=&quot;엉망진창인 사람의 모습&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;제가 들은 국비 교육은 말 그대로 엉망진창이었습니다.&lt;br /&gt;
+커리큘럼은 매우 빵빵하게 나열되었지만, 실상은 전혀 달랐습니다. 학생들이 어렵다고 하면 &lt;strong&gt;수시로 커리큘럼이 변경되었고 중간엔 결국 강사님도 포기&lt;/strong&gt;하더군요. 학생들은 메이플스토리를 하면서 시간을 보내고 조별 과제가 있었지만, 과제를 신경 쓰지 않았고 강사님도 이를 신경 쓰지 않았습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/03/Buddha_attained_ enlightenment.jpg&quot; alt=&quot;현타가 와서 부처처럼 온자해진 나를 비유한 모습&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;현타가 왔지만 그래도 이 과정을 거치면서 깨달은 중요한 몇 가지 사실이 있었습니다. 그  사실들이 저를 디지털 마케터의 길로 인도했습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;정말 빅데이터 분야로 취업하기 위해선 &lt;strong&gt;공부할 게 너무 많다&lt;/strong&gt;. 국비 지원 몇 백시간 교육으로 제대로 된 곳에 취업하는 것은 어렵다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;나는 &lt;strong&gt;문제 해결을 좋아한다&lt;/strong&gt;. 문제점에 봉착하면 스트레스보다 ‘어떻게 해결할까?’를 먼저 고민하고 해결했을 때의 쾌감을 즐긴다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;평소에도 나는 &lt;strong&gt;사람을 관찰하고 분석하는 것을 좋아했다.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;나의 &lt;strong&gt;검색 능력은 남들보다 뛰어나다.&lt;/strong&gt; 모르는 것을 물어보기보다 스스로 검색해서 찾는 것을 즐긴다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;나는 호기심이 많고 여러 분야에 관심이 많다. 그리고 &lt;strong&gt;새로운 것을 습득하는 것을 즐기고 빨리 습득한다&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이 5가지의 깨달음을 바탕으로 새로운 진로를 빠르게 서칭했고 저는 어떤 블로그를 찾게 되었어요&lt;/p&gt;
+
+&lt;h2 id=&quot;나를-디지털-마케터로-이끈-블로그&quot;&gt;나를 디지털 마케터로 이끈 블로그&lt;/h2&gt;
+
+&lt;p&gt;제가 검색을 통해 찾은 블로그는 실리콘밸리에서 그로스 해커로 일한 경험이 있으신 앤드류 안님의 블로그였어요. 당시 제가 발견한 글은 2015년부터 연재하고 계셨던 그로스 해킹 시리즈를 마무리하는 글이었는데 2017년의 글임에도 지금 읽어봐도 훌륭한 글이고 아직 많은 사람이 헷갈리는 &lt;strong&gt;그로스 해킹에 대한 맹점을 잘 정리&lt;/strong&gt;하고 있다고 생각합니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.andrewahn.co/marketing/growth-hacking-insights/&quot;&gt;그로스 해킹, 어디까지 해봤니 #10: 시리즈를 마무리하며…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;시리즈 마지막 글만 올렸지만, 꼭 시리즈의 모든 글을 읽어보시는 것을 추천해 드려요.&lt;br /&gt;
+앤드류 안님의 블로그로 그로스 해킹을 처음 접했기 때문에 취업 준비생 때부터 그로스 해킹과 단순한 디지털 마케팅에 대한 차이를 이해할 수 있었고 마케팅 활동을 통해 얻은 데이터로 단순히 유입지표나, 광고효율을 개선하는 디지털 마케터가 아닌 &lt;strong&gt;제품 자체의 개선에 이바지하는 디지털 마케터&lt;/strong&gt;로 성장할 수 있었습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/03/thank_you.jpg&quot; alt=&quot;감사합니다&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;앤드류 안님께 감사를 드리며 이 글을 마칩니다. 감사합니다.&lt;/p&gt;
+
+&lt;p&gt;디지털 마케터를 꿈꾸는 취준생분들을 만났을 때 저와 비슷한 과정을 거치고 고민을 한 사람이 많았습니다. 제가 아직 만나지 못한 그런 과정을 거지고 있는, 고민을 하는 예비 디지털 마케터들에게 이 글이 꼭 도움이 되었으면 좋겠네요!&lt;br /&gt;
+아래 링크에서 설문지를 작성하여 저에게 직접 고민을 보낼 수도 있으니 해결하고 싶은 고민이나 궁금한 것이 있다면 언제든지 작성하여 보내주세요. 확인 후 빠르게 답변드리도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://heejun.kim/contact&quot;&gt;주인장에게 고민 접수하기&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 12:10:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>공모전, 인턴 경험 1도 없는 비전공자 행정학과 학생 디지털 마케터가 되다 (2탄)</title>
+        <description>&lt;p&gt;2탄에서는 1탄에서 안내해 드렸던 것처럼 제가 취업을 준비하고 디지털 마케터로 살아가는 데 도움이 되었던 것을 소개하고자 합니다. 제게 삶에 동기부여를 주고, 진로를 탐색하는 데 도움이 되었던 대외활동과 서비스를 소개합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;동기부여를-받을-수-있었던-대외활동&quot;&gt;동기부여를 받을 수 있었던 대외활동&lt;/h2&gt;
+
+&lt;p&gt;2번째 복학 후 많은 교내활동과 대외활동을 했지만, 기억에 가장 남는 것은 KT&amp;amp;G 상상유니브에요. &lt;br /&gt;상상유니브는 KT&amp;amp;G에서 오직 대학생을 위해 운영하는 사회 공헌 활동이며 난타 클래스, 칵테일 클래스 같은 취미 클래스 외에 발표, 면접 같은 취업에 도움 되는 클래스를 소액의 책임 비를 받거나 무료로 알려주는 프로그램입니다.&lt;br /&gt;
+&lt;strong&gt;(대학생 때만 누릴 수 있는 특권과 같은 대외활동인데 생각보다 많은 학생이 잘 모르더라고요… )&lt;/strong&gt;&lt;br /&gt;실제로 상상유니브의 여러 클래스를 참여하면 만났던 사람을 만나는 경우가 많아요! &lt;br /&gt;상상유니브에서 발표 공포증을 극복하는 등 스킬 적으로 얻은 부분도 있었지만, 저에게 정말 충격적이었고 취업을 하는데 그리고 지금도 삶을 살아가는 데 영향을 준 것은 사람이에요. &lt;br /&gt;20살에 이미 10개가 넘는 NGO에서 활동하는 친구부터 부모님의 도움 없이 체류 국가에서 일하며 세계를 누비고 온 형, 이미 5~6개의 대외활동을 하며 높은 성적도 받는 친구들까지 정말 미친 듯이 열심히 살아가고 있는 사람들을 만날 수 있었어요. &lt;br /&gt;같이 클래스를 들었던 친구들과는 아직 연락하고 있는데 당연하게도 모두 꿈을 이뤘습니다. &lt;strong&gt;그들은 노력하고 철저히 준비하는 될놈될&lt;/strong&gt;이였으니까요. &lt;br /&gt;아직 대학생이라면 코로나가 안정화 되면 상상유니브에 꼭 참가해보세요. 내게 부족한 것을 보완할 수 있을 뿐만 아니라 훌륭한 사람, 열심히 살아갈 동기 부여까지 얻어갈 수 있는 훌륭한 대외활동이니까요! 특권! 누릴 수 있을 때 누립시다!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.sangsanguniv.com/main.univ&quot;&gt;상상유니브 알아보기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;진로-탐색에-도움을-주었던-잇다&quot;&gt;진로 탐색에 도움을 주었던 ‘잇다’&lt;/h2&gt;
+
+&lt;p&gt;잇다는 취업준비생과 현직자를 이어주는 &lt;strong&gt;‘실명 기반 현직자 상담제멘토링 서비스’&lt;/strong&gt; 입니다. 제가 사용할 당시에는 잇다가 완전 초창기인 시절이라 현직자에게 질문을 남기고 답변을 받는 기능밖에 없었는데 지금은 온라인 클래스도 제공하고 정말 다채로워졌네요. &lt;br /&gt;잇다는 우선 &lt;strong&gt;무료&lt;/strong&gt;입니다. ‘로켓’이라는 질문할 때 사용하는 재화가 있지만, 최초 3개를 충전해주고 그 후 멘토님에게 고맙습니다를 남기면 다시 1개가 충전됩니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;참고--로켓은-질문권을-의미합니다-최초-3개가-충전되며-멘토에게-답변을-받고-고맙습니다를-작성하시면-1개씩-자동-충전됩니다&quot;&gt;참고 : 로켓은 질문권을 의미합니다. 최초 3개가 충전되며, 멘토에게 답변을 받고 고맙습니다를 작성하시면 1개씩 자동 충전됩니다.&lt;/h4&gt;
+
+&lt;p&gt;제가 멘토님과 나눴던 글을 예시로 한 번 보여드릴게요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/02/itda_question.png&quot; alt=&quot;잇다 멘티 질문 예시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 식으로 자유롭게 글자의 제한이 없이 질문을 작성해요. 멘토님은 질문만으로 멘티를 파악할 수 있기 때문에 질문이 자세할수록 좋은 답변이 돌아올 확률이 당연히 높습니다. 내가 이런 &lt;strong&gt;고민을 하게 된 배경, 현재 가지고 있는 의문점&lt;/strong&gt;을 잘 정리해서 한 번 지금 내가 가지고 있는 진로 고민을 멘토님께 전달해보세요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/02/itda_answer.png&quot; alt=&quot;잇다 멘토 답변 예시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그럼 이런 &lt;strong&gt;정성스러운 답변&lt;/strong&gt;이 돌아온답니다. 저를 담당하는 멘토님만 그런 게 아니에요. 잇다에 무료로 제공되는 진로 고민 콘텐츠를 보면 다들 답변을 정말 정성스럽게 주십니다. 그리고 취업 준비 오픈 카톡방이나 카페보다 정확한 정보들이 있으니 내가 고민하는 직업의 콘텐츠들도 한 번 살펴보시는 것을 추천해 드립니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.itdaa.net/&quot;&gt;잇다 알아보기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;제공한 정보가 꼭 진로 탐색과 취업 준비를 위한 동기부여에 꼭 도움이 되었으면 좋겠네요! 3탄에서는 제가 어떻게 디지털 마케터라는 진로에 다다르게 되었는지 얘기해보려고 합니다. 3탄도 많이 기대해주세요!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Aug 2020 19:37:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>공모전, 인턴 경험 1도 없는 비전공자 행정학과 학생 디지털 마케터가 되다 (1탄)</title>
+        <description>&lt;h2 id=&quot;꿈이-없던-시절&quot;&gt;꿈이 없던 시절&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/01/nodreamimg.jpg&quot; alt=&quot;목적지가 정해지지 않은 길&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사실 저에게는 오랫동안 꿈이 없었어요. 꿈이 없었기 때문에 부모님의 소망이던 공무원을 꿈으로 가지게 되었고 행정학과에 진학하게 되었습니다. 군대를 다녀온 뒤 흔히들 말하는 전역 버프로 복학과 동시에 4.5를 받게 되었고 이 정신으로 공부를 하면 되겠다 싶어 23살 이른 나이에 공무원을 준비를 시작했습니다. &lt;br /&gt;
+&lt;strong&gt;(어린 나이에 준비했던 게 신의 한 수였어요! 저는 공무원이 되지는 못했지만, 공무원을 꿈꾼다면 일찍 도전해보세요)&lt;/strong&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;쓰디쓴-실패를-맛보다&quot;&gt;쓰디쓴 실패를 맛보다&lt;/h2&gt;
+
+&lt;p&gt;9개월을 준비하고 본 첫 시험에서 10점 차 정도의 점수로 떨어진 뒤 1년 뒤 다시 본 시험에서도 저는 몇 점 차이로 떨어졌습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/01/forkedroad.jpg&quot; alt=&quot;갈림길&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이때 공무원을 준비하는 사람은 두 가지 선택지에 놓이는데 저는 과감히 그 길을 포기했어요. 두 번의 실패 후 제 머릿속에 계속 &lt;strong&gt;“이게 네가 하고 싶은 게 맞아?”, “진짜 네가 해보고 싶은걸 찾아봤어?”&lt;/strong&gt;라는 의문이 맴돌았기 때문이에요. &lt;br /&gt;그래서 부모님께 제 생각을 말씀드렸고 부모님은 오히려 미안하다며 새로운 길을 응원해주셨어요. 많은 금전적 부담을 드렸음에도 응원해주시는 부모님을 보며 다시 일어설 수 있었고 이때 실패에 대한 가치를 자각했었어요.  &lt;br /&gt;(부모님은 다른 기업이 아닌 스타트업만을 목표로 할 때도 나를 열렬히 응원해주셨어요)&lt;/p&gt;
+
+&lt;h2 id=&quot;나를-알아갔던-시간&quot;&gt;나를 알아갔던 시간&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/01/busylife.jpg&quot; alt=&quot;바쁘게 살아가는 모습&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;25살 실패의 경험을 갖고 2학년 2학기로 복학한 후 정말 바쁘게 살았어요. 부모님께서 주셨던 금전적 도움을 갚기 위해 4학년 1학기까지 4.5를 맞추기 위해 학업에 열중했고 내가 정말 좋아하는 것을 찾기 위해 그리고 그 과정에서 찾은 약점을 보완하기 위해 동아리, 교내활동, 대외활동을 했습니다. &lt;br /&gt;대부분 도움이 되었지만 지금 디지털 마케터로 살아가는 데 특히 도움이 되는 것들만 간략하게 다음 편에서 소개해보려고 해요.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Aug 2020 11:00:00 +0900</pubDate>
+        <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</link>
+        <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</guid>
+        
+        <category>jobstory</category>
+        
+        <category>취준생</category>
+        
+        <category>디지털마케터_취업</category>
+        
+        <category>비전공</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

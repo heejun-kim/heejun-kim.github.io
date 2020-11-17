@@ -1,0 +1,139 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {%if page.title %}
+      {{ page.title }} - {{ site.data.settings.title }}
+    {% else %}
+      {{ site.data.settings.title }} - {{ site.data.settings.tagline }}
+    {% endif %}
+  </title>
+  <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <!-- SEO Tag -->
+  <meta name="twitter:card" content="summary_large_image" />
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+  {% else %}
+    <meta property="og:title" content="{{ site.data.settings.title }} - {{ site.data.settings.tagline }}" />
+    <meta name="twitter:title" content="{{ site.data.settings.title }} - {{ site.data.settings.tagline }}" />
+  {% endif %}
+  {% if page.title %}
+    <meta property="og:type" content="article" />
+  {% else %}
+    <meta property="og:type" content="website" />
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+  {% else %}
+    <meta name="description" content="{{ site.data.settings.description }}" />
+    <meta property="og:description" content="{{ site.data.settings.description }}" />
+    <meta name="twitter:description" content="{{ site.data.settings.description }}" />
+  {% endif %}
+  {% if page.url %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  {% endif %}
+  {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    <meta property="article:author" content="{{site.data.settings.author.name}}" />
+  {% endif %}
+  {% if page.image %}
+    <meta property="og:image" content="{{site.url}}/images/{{page.image}}" />
+    <meta name="twitter:image:src" content="{{site.url}}/images/{{page.image}}" />
+  {% else %}
+    <meta property="og:image" content="{{site.url}}/images/{{page.image}}" />
+    <meta name="twitter:image:src" content="{{site.url}}/images/{{page.image}}" />
+  {% endif %}
+    <meta property="og:locale" content="{{ site.data.settings.locale }}" />
+    <meta property="og:site_name" content="{{ site.data.settings.title }}" />
+  {% if page.tags %}
+    {% for tag in page.tags limit:1 %}
+    <meta property="article:section" content="tag-{{ tag }}" />
+    {% endfor %}
+  {% endif %}
+  {% if page.tags %}
+    {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+    {% endfor %}
+  {% endif %}
+  <!-- End SEO Tag -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+  {% capture include_to_scssify %}
+    {% include main.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+  </style>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+<link rel="manifest" href="/images/icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- 네이버 연관채널 등록 -->
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "Person",
+"name": "{{ site.data.settings.title }}",
+"url": "{{ site.url }}",
+"sameAs": [
+]
+}
+</script>
+<!-- 네이버 연관채널 등록 구조화된 데이터 태그 끝-->
+<!-- 아티클 구조화된 데이터-->
+{% if page.image %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ page.title }}",
+    "image": [
+      "{{site.url}}/images/{{page.image}}"
+     ],
+    "datePublished": "{{ page.date }}"
+  }
+  </script>
+    {% endif %}
+  <!-- 아티클 구조화된 데이터 태그 끝 -->
+  <!-- 네이버 검색엔진 등록 -->
+  <meta name="naver-site-verification" content="061a879256f8a8730d2c48258efcbaecdcfe3789" />
+  <!-- 네이버 검색인 등록 코드 끝 -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178409995-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-178409995-1');
+  </script>
+</head>

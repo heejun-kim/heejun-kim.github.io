@@ -1,0 +1,17 @@
+---
+layout: page
+title: 취업 이야기
+permalink: /tag/jobstory
+image: 08.jpg
+---
+
+<div class="arhive-head">
+  <div class="container">
+    <h1 class="archive-title">주제 : <span>{{ page.tag }}</span></h1>
+  </div>
+</div>
+
+
+{% for post in page.posts %}
+  {% include article-content.html %}
+{% endfor %}

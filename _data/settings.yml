@@ -1,0 +1,42 @@
+#-------------------------------
+# General Site Settings
+title: 스마일 다이어리
+tagline:  스타트업 디지털 마케터의 일기장
+logo: smilediary_logo.svg # You can add own logo.
+description: 비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기
+locale: ko_KR
+
+
+#-------------------------------
+# Author Settings
+author:
+  name: 주니언
+  image: blog_thumbnail.jpg
+  say-hello: 스마일 다이어리에 잘 오셨습니다!
+  bio: 어서 오세요! 이곳은 3년 차 디지털 마케터가 <strong>디지털 마케터를 꿈꾸는 취준생</strong>, <strong>사수가 없는 현직자</strong>, <strong>갓 디지털 마케팅에 입문한 신입</strong>에게 유용한 정보를 전달하는 곳입니다.
+
+
+#-------------------------------
+# Contact links
+facebook: https://www.facebook.com/heejun.kim.junian/ # Add your Facebook handle
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: smilediary # add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Instagram Feed
+instafeed: # To enable the instafeed, use the value true. To turn off use the value false.
+instagram-profile: artemsheludko_ # Add instagram username
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
