@@ -5,7 +5,6 @@ title: "최고의 디지털 마케팅 취업 교육 '마개팅 취업스쿨'"
 date: 2020-10-28 20:30:00 +09:00
 image: posts/06/thumb_up_thumbnail.jpg
 tags:
-  - 취업 이야기
   - 취준생
   - 디지털마케터 취업
   - 비전공
