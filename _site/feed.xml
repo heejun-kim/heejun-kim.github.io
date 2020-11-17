@@ -5,8 +5,8 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2020 00:32:46 +0900</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2020 00:32:46 +0900</lastBuildDate>
+    <pubDate>Wed, 18 Nov 2020 00:57:43 +0900</pubDate>
+    <lastBuildDate>Wed, 18 Nov 2020 00:57:43 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -132,9 +132,11 @@
         <link>http://localhost:4000/tag/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</guid>
         
-        <category>marketingstory</category>
+        <category>마케팅 이야기</category>
         
-        <category>구글애널리틱스_4</category>
+        <category>구글애널리틱스 4</category>
+        
+        <category>내부IP제거</category>
         
         <category>디지털마케팅</category>
         
@@ -199,11 +201,11 @@
         <link>http://localhost:4000/tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         
@@ -249,11 +251,11 @@
         <link>http://localhost:4000/tag/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         
@@ -286,11 +288,11 @@
         <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         
@@ -362,11 +364,11 @@
         <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         
@@ -408,11 +410,11 @@
         <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         
@@ -446,11 +448,11 @@
         <link>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</link>
         <guid isPermaLink="true">http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</guid>
         
-        <category>jobstory</category>
+        <category>취업 이야기</category>
         
         <category>취준생</category>
         
-        <category>디지털마케터_취업</category>
+        <category>디지털마케터 취업</category>
         
         <category>비전공</category>
         

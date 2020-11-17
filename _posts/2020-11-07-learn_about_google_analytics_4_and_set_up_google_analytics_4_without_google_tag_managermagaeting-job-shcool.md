@@ -5,8 +5,9 @@ title: "구글 애널리틱스 4(Google Analytics 4)를 알아본 뒤, 구글 �
 date: 2020-11-07 23:05:00 +09:00
 image : posts/07/google_analytics_four_thumbnail_3.jpg
 tags:
-  - marketingstory
-  - 구글애널리틱스_4
+  - 마케팅 이야기
+  - 구글애널리틱스 4
+  - 내부IP제거
   - 디지털마케팅
 description: '새로 탄생한 구글 애널리틱스 4(google analytics 4)에 대해 알아보고 구글 태그매니저 없이 세팅까지 해보고 내부 IP 필터까지 적용해보겠습니다.'
 ---
