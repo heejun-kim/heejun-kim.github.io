@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/
+permalink: /category/jobstory/top-digital-marketing-job-training-magaeting-job-school/
 title: "최고의 디지털 마케팅 취업 교육 '마개팅 취업스쿨'"
 date: 2020-10-28 20:30:00 +09:00
 image: posts/06/thumb_up_thumbnail.jpg

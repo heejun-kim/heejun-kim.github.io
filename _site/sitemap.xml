@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>http://localhost:4000/tag/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</loc>
+      <loc>http://localhost:4000/category/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</loc>
       
         <lastmod>2020-11-07T23:05:00+09:00</lastmod>
       
@@ -18,7 +18,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/top-digital-marketing-job-training-magaeting-job-school/</loc>
+      <loc>http://localhost:4000/category/jobstory/top-digital-marketing-job-training-magaeting-job-school/</loc>
       
         <lastmod>2020-10-28T20:30:00+09:00</lastmod>
       
@@ -34,7 +34,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</loc>
+      <loc>http://localhost:4000/category/jobstory/i-will-solve-the-curiosity-of-non-majors-who-dream-of-becoming-digital-marketer/</loc>
       
         <lastmod>2020-10-07T19:30:00+09:00</lastmod>
       
@@ -50,7 +50,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</loc>
+      <loc>http://localhost:4000/category/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/</loc>
       
         <lastmod>2020-09-27T12:45:00+09:00</lastmod>
       
@@ -66,7 +66,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</loc>
+      <loc>http://localhost:4000/category/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-third-story/</loc>
       
         <lastmod>2020-09-13T12:10:00+09:00</lastmod>
       
@@ -82,7 +82,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</loc>
+      <loc>http://localhost:4000/category/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-second-story/</loc>
       
         <lastmod>2020-08-26T19:37:00+09:00</lastmod>
       
@@ -98,7 +98,7 @@
     </url>
   
     <url>
-      <loc>http://localhost:4000/tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</loc>
+      <loc>http://localhost:4000/category/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-first-story/</loc>
       
         <lastmod>2020-08-23T11:00:00+09:00</lastmod>
       

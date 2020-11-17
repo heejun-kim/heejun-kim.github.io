@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /tag/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/
+permalink: /category/jobstory/how-did-non-major-public-administration-students-become-digital-marketer-last-story/
 title: '공모전, 인턴 경험 1도 없는 비전공자 행정학과 학생 디지털 마케터가 되다 (4탄)'
 date: 2020-09-27 12:45:00 +09:00
 image: posts/04/last_thumbnail.jpg
