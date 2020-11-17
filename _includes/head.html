@@ -50,8 +50,8 @@
     <meta property="og:image" content="{{site.url}}/images/{{page.image}}" />
     <meta name="twitter:image:src" content="{{site.url}}/images/{{page.image}}" />
   {% else %}
-    <meta property="og:image" content="{{site.url}}/images/{{page.image}}" />
-    <meta name="twitter:image:src" content="{{site.url}}/images/{{page.image}}" />
+    <meta property="og:image" content="{{site.url}}/images/{{ site.data.settings.author.image }}" />
+    <meta name="twitter:image:src" content="{{site.url}}/images/{{ site.data.settings.author.image }}" />
   {% endif %}
     <meta property="og:locale" content="{{ site.data.settings.locale }}" />
     <meta property="og:site_name" content="{{ site.data.settings.title }}" />
