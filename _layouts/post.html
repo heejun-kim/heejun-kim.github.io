@@ -111,3 +111,8 @@ layout: default
 
   {% if site.data.settings.disqus-identifier %} {% include disqus-comments.html %} {% endif %}
   </div>
+
+  <script type="text/javascript">
+   var title = '{{ page.title }}';
+   gtag('event', title, { 'event_category' : '글보기'});
+ </script>
