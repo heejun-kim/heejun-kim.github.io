@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "구글 태그매니저로 구글 애널리틱스 4(GA4), 유니버설 구글 애널리틱스 설치하기",
+      "category" : "",
+      "tags"     : "구글애널리틱스 4, 구글태그매니저, and 기초",
+      "url"      : "/category/marketingstory/installing-google-analytics-4,-universal-google-analytics-with-google-tagmanager/",
+      "date"     : "20 Nov, 2020"
+    } ,
+  
+    {
       "title"    : "구글 애널리틱스 4(Google Analytics 4)를 알아본 뒤, 구글 태그 매니저 없이 세팅해보고 내부 IP를 제거해보자",
       "category" : "",
       "tags"     : "구글애널리틱스 4 and 디지털마케팅",

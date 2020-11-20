@@ -2,6 +2,22 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>http://localhost:4000/category/marketingstory/installing-google-analytics-4,-universal-google-analytics-with-google-tagmanager/</loc>
+      
+        <lastmod>2020-11-20T15:13:00+09:00</lastmod>
+      
+
+      
+        <changefreq>weekly</changefreq>
+      
+
+      
+          <priority>0.5</priority>
+      
+
+    </url>
+  
+    <url>
       <loc>http://localhost:4000/category/marketingstory/learn_about_google_analytics_4,_set_up_google_analytics_4_without_google_tag_manager_and_apply_internal_ip_filter/</loc>
       
         <lastmod>2020-11-07T23:05:00+09:00</lastmod>
