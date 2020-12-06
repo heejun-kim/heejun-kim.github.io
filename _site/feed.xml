@@ -5,8 +5,8 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Dec 2020 21:29:59 +0900</pubDate>
-    <lastBuildDate>Sun, 06 Dec 2020 21:29:59 +0900</lastBuildDate>
+    <pubDate>Sun, 06 Dec 2020 21:41:37 +0900</pubDate>
+    <lastBuildDate>Sun, 06 Dec 2020 21:41:37 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -25,16 +25,16 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;b&gt;utm_source&lt;/b&gt; : facebook, newsletter, google, naver 같은 유입 출처를 적어줍니다. 즉 고객이 어디서 유입되었는지 알려줍니다. 
+&lt;li&gt;&lt;b&gt;utm_source&lt;/b&gt; : facebook, newsletter, google, naver 같은 유입 출처를 적어줍니다. 즉 고객이 어디서 유입되었는지 알려줍니다.
 &lt;/li&gt;&lt;br /&gt;
-&lt;li&gt;&lt;b&gt;utm_medium&lt;/b&gt; : cpc, email, display, social 같이 어떤 마케팅 방식을 통해 고객이 유입되었는지 알 수 있게 적어줍니다. 
+&lt;li&gt;&lt;b&gt;utm_medium&lt;/b&gt; : cpc, email, display, social 같이 어떤 마케팅 방식을 통해 고객이 유입되었는지 알 수 있게 적어줍니다.
 &lt;/li&gt;&lt;br /&gt;
 &lt;li&gt;&lt;b&gt;utm_campaign&lt;/b&gt; : 캠페인 부분부터는 딱히 정해진 규칙 없이 마케터에 따라 다르게 사용됩니다. 다만 캠페인의 경우 추후 필터 기능을 이용해 분석하는 데 사용되므로 분석에 필요한 요소에 따라 규칙을 정해 작성하는 것이 좋습니다.
 &lt;/li&gt;&lt;br /&gt;
 &lt;li&gt;&lt;b&gt;utm_content&lt;/b&gt; : 마케팅에 활용된 콘텐츠의 정보를 넣는 곳으로, 콘텐츠도 캠페인과 마찬가지로 분석에 필요한 요소에 따라 규칙을 정해 작성하는 것이 좋습니다.
 &lt;/li&gt;&lt;br /&gt;
 &lt;li&gt;&lt;b&gt;utm_term&lt;/b&gt; : 검색광고에 활용되며, 해당 유입이 어떤 키워드를 통해 발생했는지 알려줍니다.
-&lt;/li&gt; 
+&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;utm 매개변수를 사용하는 것은 쉽습니다. 자신이 추적하고자 하는 웹사이트 url 맨 끝에 ?를 넣고 utm 매개변수를 붙여주기만 하면 됩니다. 그러면 해당 url로 랜딩페이지에 유입되었을 시에 자동으로 유니버설 구글 애널리틱스까지는 해당 정보를 적절한 측정기준에 넣어줍니다.  구글 애널리틱스 4에서는 콘텐츠와 키워드는 우리가 설정을 해줘야 합니다&lt;br /&gt;구글이 제공하는 해당 사이트에서 쉽게 만들어볼 수 있으니 활용해보세요&lt;/p&gt;
@@ -114,12 +114,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;맞춤 측정기준 만들기를 누릅니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/posts/09/google_analytics_4_utm_setting_step9.png&quot; alt=&quot;구글 애널리틱스 4 utm 세팅9단계&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/09/google_analytics_4_utm_setting_step9.png&quot; alt=&quot;구글 애널리틱스 4 utm 세팅9단계&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;이벤트 매개변수 이름에 기존에 확인하고 왔던 content와 term을 넣어주고 맞춤 측정기준 이름에 적절한 이름을 넣어 맞춤 측정기준을 각각 생성해줍니다.&lt;/p&gt;
 

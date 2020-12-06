@@ -13,7 +13,7 @@ description: '구글 애널리틱스 4에서 기본 측정기준으로 존재하
 
 
 
-안녕하세요 오늘은 구글 애널리틱스 4를 처음 설치하고 데이터를 보려고 했을 때 가장 당황스러울 수 있는 utm_content, utm_term 매개변수가 추적되지 않는 문제를 해결해보겠습니다. 
+안녕하세요 오늘은 구글 애널리틱스 4를 처음 설치하고 데이터를 보려고 했을 때 가장 당황스러울 수 있는 utm_content, utm_term 매개변수가 추적되지 않는 문제를 해결해보겠습니다.
 
 ## utm 매개변수가 뭔가요?
 
@@ -28,16 +28,16 @@ https://example.com/?utm_source=source_name&utm_medium=medium_name&utm_campaign=
 ```
 
 <ul>
-<li><b>utm_source</b> : facebook, newsletter, google, naver 같은 유입 출처를 적어줍니다. 즉 고객이 어디서 유입되었는지 알려줍니다. 
+<li><b>utm_source</b> : facebook, newsletter, google, naver 같은 유입 출처를 적어줍니다. 즉 고객이 어디서 유입되었는지 알려줍니다.
 </li><br>
-<li><b>utm_medium</b> : cpc, email, display, social 같이 어떤 마케팅 방식을 통해 고객이 유입되었는지 알 수 있게 적어줍니다. 
+<li><b>utm_medium</b> : cpc, email, display, social 같이 어떤 마케팅 방식을 통해 고객이 유입되었는지 알 수 있게 적어줍니다.
 </li><br>
 <li><b>utm_campaign</b> : 캠페인 부분부터는 딱히 정해진 규칙 없이 마케터에 따라 다르게 사용됩니다. 다만 캠페인의 경우 추후 필터 기능을 이용해 분석하는 데 사용되므로 분석에 필요한 요소에 따라 규칙을 정해 작성하는 것이 좋습니다.
 </li><br>
 <li><b>utm_content</b> : 마케팅에 활용된 콘텐츠의 정보를 넣는 곳으로, 콘텐츠도 캠페인과 마찬가지로 분석에 필요한 요소에 따라 규칙을 정해 작성하는 것이 좋습니다.
 </li><br>
 <li><b>utm_term</b> : 검색광고에 활용되며, 해당 유입이 어떤 키워드를 통해 발생했는지 알려줍니다.
-</li> 
+</li>
 </ul>
 
 utm 매개변수를 사용하는 것은 쉽습니다. 자신이 추적하고자 하는 웹사이트 url 맨 끝에 ?를 넣고 utm 매개변수를 붙여주기만 하면 됩니다. 그러면 해당 url로 랜딩페이지에 유입되었을 시에 자동으로 유니버설 구글 애널리틱스까지는 해당 정보를 적절한 측정기준에 넣어줍니다.  구글 애널리틱스 4에서는 콘텐츠와 키워드는 우리가 설정을 해줘야 합니다<br>구글이 제공하는 해당 사이트에서 쉽게 만들어볼 수 있으니 활용해보세요
@@ -67,19 +67,19 @@ utm 매개변수를 사용하는 것은 쉽습니다. 자신이 추적하고자 
 
 2. 구글 애널리틱스 4에 접속하여 실시간 탭에 들어가면 나의 접속 기록이 보이는 것을 확인할 수 있습니다.
 
-   ![구글 애널리틱스 4 utm 세팅 1단계](/images/posts/09/google_analytics_4_utm_setting_step1.png) 
+   ![구글 애널리틱스 4 utm 세팅 1단계](/images/posts/09/google_analytics_4_utm_setting_step1.png)
 
 3. 구글 애널리틱스 4의 특성에 따라 자동으로 page_view 이벤트가 찍혀있는 것을 확인할 수 있습니다. 해당 page_view 이벤트를 클릭하고 들어갑니다.
 
-   ![구글 애널리틱스 4 utm 세팅 2단계](/images/posts/09/google_analytics_4_utm_setting_step2.png) 
+   ![구글 애널리틱스 4 utm 세팅 2단계](/images/posts/09/google_analytics_4_utm_setting_step2.png)
 
 4. page_view 이벤트를 클릭하고 들어가면 구글 애널리틱스 4가 자동으로 수집해주는 매개변수를 확인할 수 있습니다. 놀랍게도 **utm_content도 구글 애널리틱스 4에서 이미 자동으로 수집**해주고 있었습니다.
 
-   ![구글 애널리틱스 4 utm 세팅3단계](/images/posts/09/google_analytics_4_utm_setting_step3.png) 
+   ![구글 애널리틱스 4 utm 세팅3단계](/images/posts/09/google_analytics_4_utm_setting_step3.png)
 
 5. content라는 이름을 가진 매개변수를 눌러서 들어가면 내가 utm_conent에 설정해놨던 콘텐츠 이름이 보이는 것을 확인할 수 있습니다. 저는 test로 명명했기 때문에 test라고 값이 전달되었습니다.
 
-   ![구글 애널리틱스 4 utm 세팅4단계](/images/posts/09/google_analytics_4_utm_setting_step4.png) 
+   ![구글 애널리틱스 4 utm 세팅4단계](/images/posts/09/google_analytics_4_utm_setting_step4.png)
 
 6. 같은 page_view 이벤트에서 term도 한 번 찾아볼까요? term이라는 매개변수 명으로 존재하고 있네요 마찬가지로 term을 눌러서 들어가 보면 utm_term에 설정해놨던 키워드가 보이는 것을 확인할 수 있습니다. 저는 test_term으로 명명했기 때문에 test_term이라고 값이 전달되었습니다.
 
@@ -103,8 +103,7 @@ utm 매개변수를 사용하는 것은 쉽습니다. 자신이 추적하고자 
 
    ![구글 애널리틱스 4 utm 세팅8단계](/images/posts/09/google_analytics_4_utm_setting_step8.png)
 
-9. 
-   맞춤 측정기준 만들기를 누릅니다.
+9. 맞춤 측정기준 만들기를 누릅니다.
 
    ![구글 애널리틱스 4 utm 세팅9단계](/images/posts/09/google_analytics_4_utm_setting_step9.png)
 
@@ -118,9 +117,9 @@ utm 매개변수를 사용하는 것은 쉽습니다. 자신이 추적하고자 
 
     ![구글 애널리틱스 4 utm 세팅12단계](/images/posts/09/google_analytics_4_utm_setting_step12.png)
 
-12. 이렇게 맞춤 측정기준으로 만들고 나면 **유니버설 애널리틱스에서 광고 콘텐츠, 키워드 측정기준을 활용했던 것처럼 분석 보고서나 획득 보고서에서 측정기준으로 활용**이 가능해집니다. 
+12. 이렇게 맞춤 측정기준으로 만들고 나면 **유니버설 애널리틱스에서 광고 콘텐츠, 키워드 측정기준을 활용했던 것처럼 분석 보고서나 획득 보고서에서 측정기준으로 활용**이 가능해집니다.
 
-    
+
 
 오늘은 구글 애널리틱스 4를 사용하면서 많은 분이 궁금해하셨던 utm 매개변수 추적에 대해 다뤄봤습니다. 알고 나면 별것 아닌데 매개변수나 utm 매개변수에 대한 개념이 없으면 쉽게 다가가기 어려운 주제인 것 같습니다. <br>당연하게 사용해야 한다고 해서 규칙을 외워 사용하기보다는 원리와 본질을 깨닫고 활용하는 것의 중요성을 다시 한번 깨달은 순간이었습니다.
-다음에 더 알찬 글로 찾아뵙겠습니다. 감사합니다:-) 
+다음에 더 알찬 글로 찾아뵙겠습니다. 감사합니다:-)
