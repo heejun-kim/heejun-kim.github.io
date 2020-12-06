@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -127,6 +127,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <body>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+  Kakao.init('02bd07c071db1509bbe0b181c72169e4');
+
+  function kakaoshare (){
+
+  Kakao.Link.sendDefault({
+objectType: 'feed',
+content: {
+  title: 'About',
+  description: '',
+  imageUrl:
+    'http://localhost:4000/images/bg-about.jpg',
+  link: {
+    mobileWebUrl: 'http://localhost:4000/about/?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+      webUrl : 'http://localhost:4000/about/?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+  },
+},
+buttons: [
+  {
+    title: '자세히 보기',
+    link: {
+      mobileWebUrl: 'http://localhost:4000/about/?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+      webUrl : 'http://localhost:4000/about/?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+    },
+  },
+]
+});
+}
+</script>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3737K5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -168,6 +199,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li class="nav__item">
                 <a href="/about/" class="nav__link">About</a>
               </li>
+              
+                
+              
+                
+              
+                
+              
+                
               
                 
               
@@ -363,6 +402,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/js/vendors/instafeed.min.js"></script>
 <script src="/js/vendors/jquery.fitvids.js"></script>
 <script src="/js/common.js"></script>
+
 </body>
 
 </html>

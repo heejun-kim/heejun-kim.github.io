@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "구글 애널리틱스 4(GA4)에서 utm_content, utm_term 추적하기",
+      "category" : "",
+      "tags"     : "구글애널리틱스 4, utm매개변수, and 실전",
+      "url"      : "/category/marketingstory/tracking_utm_content,_utm_term_in_google_analytics_4/",
+      "date"     : "6 Dec, 2020"
+    } ,
+  
+    {
       "title"    : "구글 태그매니저로 구글 애널리틱스 4(GA4), 유니버설 구글 애널리틱스 설치하기",
       "category" : "",
       "tags"     : "구글애널리틱스 4, 구글태그매니저, and 기초",
