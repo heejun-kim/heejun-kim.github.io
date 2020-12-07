@@ -5,8 +5,8 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Dec 2020 21:41:37 +0900</pubDate>
-    <lastBuildDate>Sun, 06 Dec 2020 21:41:37 +0900</lastBuildDate>
+    <pubDate>Mon, 07 Dec 2020 10:53:27 +0900</pubDate>
+    <lastBuildDate>Mon, 07 Dec 2020 10:53:27 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -43,7 +43,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;대소문자를 구별하므로 되도록이면 소문자로 만듭니다.&lt;/li&gt;
-  &lt;li&gt;기존 웹사이트 url에 이미 ? 파라미터가 있는 경우 ?를 사용하면 오류가 발생한다. 이 경우 ? 대 &amp;amp;를 사용하여 utm 매개변수를 연결합니다.&lt;/li&gt;
+  &lt;li&gt;기존 웹사이트 url에 이미 ? 파라미터가 있는 경우 ?를 사용하면 오류가 발생합니다. 이 경우 ? 대신 &amp;amp;를 사용하여 utm 매개변수를 연결합니다.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://ga-dev-tools.appspot.com/campaign-url-builder/&quot;&gt;구글 utm 생성 사이트&lt;/a&gt;&lt;/p&gt;
