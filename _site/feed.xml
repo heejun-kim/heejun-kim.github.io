@@ -5,8 +5,8 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Dec 2020 23:30:14 +0900</pubDate>
-    <lastBuildDate>Wed, 30 Dec 2020 23:30:14 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Dec 2020 23:34:10 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Dec 2020 23:34:10 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -25,9 +25,7 @@
 &lt;p&gt;&lt;img src=&quot;/images/posts/10/add_to_cart_bear.png&quot; alt=&quot;장바구니에 담긴 곰인형&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;고객이 귀여운 곰돌이를 장바구니에 담은 행동을 이벤트와 속성으로 구분해볼게요. ‘&lt;strong&gt;장바구니에 무언가를 담은 행동&lt;/strong&gt;‘은 고객이 일으킨 행동이기 때문에 이벤트로 구분할 수 있습니다. 구분된 이벤트에 뭔가 빈 것이 보이지 않나요? 유의미한 고객의 행동 데이터를 얻고 분석하기 위해서는 그 빈 부분을 채워줘야 하고 이는 속성으로 채울 수 있습니다.&lt;br /&gt;
-즉 장바구니 담기에서 속성은 무언가에 들어갈 ‘&lt;strong&gt;곰돌이의 정보&lt;/strong&gt;'’로 구분할 수 있습니다. 보통은 가격, 장바구니에 담긴 수량, 상품 id, 상품 이름, 상품 카테고리와 같은 정보가 들어가며 대부분의 디지털 마케팅 툴에서는 이를 표준 이벤트와 속성으로 지정해 제공하고 있습니다. 제일 많이 쓰이는 페이스북, 구글 애널리틱스의 코드를 한 번 봐보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/10/google_analytics_addtocart_event_example.png&quot; alt=&quot;구글 애널리틱스 장바구니담기 이벤트 에시&quot; /&gt;&lt;/p&gt;
+즉 장바구니 담기에서 속성은 무언가에 들어갈 ‘&lt;strong&gt;곰돌이의 정보&lt;/strong&gt;'’로 구분할 수 있습니다. 보통은 가격, 장바구니에 담긴 수량, 상품 id, 상품 이름, 상품 카테고리와 같은 정보가 들어가며 대부분의 디지털 마케팅 툴에서는 이를 표준 이벤트와 속성으로 지정해 제공하고 있습니다. 제일 많이 쓰이는 페이스북, 구글 애널리틱스의 코드를 한 번 봐보겠습니다.&lt;img src=&quot;/images/posts/10/google_analytics_addtocart_event_example.png&quot; alt=&quot;구글 애널리틱스 장바구니담기 이벤트 예시&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/10/faceebok_addtocart_event_example.png&quot; alt=&quot;페이스북 장바구니담기 이벤트 에시&quot; /&gt;&lt;/p&gt;
 
