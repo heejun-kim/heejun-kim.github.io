@@ -5,9 +5,52 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Dec 2020 12:47:19 +0900</pubDate>
-    <lastBuildDate>Mon, 07 Dec 2020 12:47:19 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Dec 2020 23:30:14 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Dec 2020 23:30:14 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>디지털 마케팅에서 이벤트란?</title>
+        <description>&lt;p&gt;안녕하세요 오늘은 디지털 마케팅에서 자주 사용되는 이벤트에 대해 알아보려고 합니다.
+이벤트는 디지털 마케팅에서 사용자의 행동을 추적하는데 근간이 되기 때문에 꼭 이해해야 하는 개념입니다. 차근차근 하나씩 알아보도록 할게요.&lt;/p&gt;
+
+&lt;h2 id=&quot;이벤트는-무엇일까&quot;&gt;이벤트는 무엇일까?&lt;/h2&gt;
+
+&lt;p&gt;이미 구글 애널리틱스나 구글태그매니저를 사용해보신 분은 이벤트라는 단어가 어색하지는 않으실거예요. 디지털 마케팅에서 이벤트는 쉽게 정의하면 ‘&lt;strong&gt;웹이나 앱에서 발생한 사용자의 행동&lt;/strong&gt;‘으로 정의할 수 있습니다. 이벤트를 좀 더 자세히 이해하기 위해서는 이벤트의 구조를 살펴볼 필요가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/10/event_and_parameter.png&quot; alt=&quot;이벤트와 속성으로 이뤄진 이벤트의 구조&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이벤트의 구조를 간단하게 그림으로 표현해봤습니다. 이벤트 안에는 속성이라는 것이 존재합니다. 이벤트에 정의에 대해서는 위에서 알아보았으니 속성에 대해 알아볼게요. 속성은 쉽게 정의하면 ‘&lt;strong&gt;사용자가 일으킨 행동에 관련된 정보&lt;/strong&gt;‘로 정의할 수 있습니다. 말로는 어려우니 장바구니 담기라는 사용자의 행동을 바탕으로 예시를 들어볼게요&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/10/add_to_cart_bear.png&quot; alt=&quot;장바구니에 담긴 곰인형&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;고객이 귀여운 곰돌이를 장바구니에 담은 행동을 이벤트와 속성으로 구분해볼게요. ‘&lt;strong&gt;장바구니에 무언가를 담은 행동&lt;/strong&gt;‘은 고객이 일으킨 행동이기 때문에 이벤트로 구분할 수 있습니다. 구분된 이벤트에 뭔가 빈 것이 보이지 않나요? 유의미한 고객의 행동 데이터를 얻고 분석하기 위해서는 그 빈 부분을 채워줘야 하고 이는 속성으로 채울 수 있습니다.&lt;br /&gt;
+즉 장바구니 담기에서 속성은 무언가에 들어갈 ‘&lt;strong&gt;곰돌이의 정보&lt;/strong&gt;'’로 구분할 수 있습니다. 보통은 가격, 장바구니에 담긴 수량, 상품 id, 상품 이름, 상품 카테고리와 같은 정보가 들어가며 대부분의 디지털 마케팅 툴에서는 이를 표준 이벤트와 속성으로 지정해 제공하고 있습니다. 제일 많이 쓰이는 페이스북, 구글 애널리틱스의 코드를 한 번 봐보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/10/google_analytics_addtocart_event_example.png&quot; alt=&quot;구글 애널리틱스 장바구니담기 이벤트 에시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/10/faceebok_addtocart_event_example.png&quot; alt=&quot;페이스북 장바구니담기 이벤트 에시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이벤트와 속성을 제대로 이해하셨다면 이제 왜 구글 애널리틱스, 페이스북과 같은 디지털 마케팅 툴에서 제공되는 표준 이벤트들이 이런 코드 구조로 되어 있는지 아실 수 있을 겁니다. 사용 방법이나 정의하고 있는 속성의 이름은 다르지만 두 코드 모두 add to cart라는 이벤트 안에 상품 이름, 상품 id, 상품 카테고리, 가격과 같은 정보를 담고 있습니다. 고객이 어떤 행동을 했는지도 중요하지만, 그 행동을 할 때 어떻게 행동을 했는지도 분석에 매우 중요하기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/10/googletagmanager_event_example.png&quot; alt=&quot;구글태그매니저 이벤트 예시&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;마지막으로 대표적인 디지털 마케팅 툴인 구글태그매니저에서 쓰이는 모습을 한 번 봐보도록 하겠습니다. 이해하기 쉽게 좀 더 이벤트, 속성 구조에 가까운 구글애널리틱스 4(GA4)의 이벤트 태그로 가져왔습니다. 보시는 것과 같이 &lt;strong&gt;구글태그매니저의 이벤트 태그도 이벤트에 속성이 들어가는 구조&lt;/strong&gt;로 되어있습니다. 전 버전인 유니버설 구글 애널리틱스에서는 속성이 &lt;strong&gt;카테고리, 라벨, 액션, 값의 4개로만 구성&lt;/strong&gt;되어 있었지만 구글애널리틱스 4부터는 원하는만큼 속성을 추가할 수 있게 변경되어 좀 더 다양한 사용자 행동의 세부내역을 추가할 수 있게 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;오늘은 이벤트와 속성에 대해 알아보았습니다. 이벤트와 속성은 간단한 개념이지만 제대로 된 이해가 필요한 개념입니다. 요즘 디지털 마케팅에 화두가 되는 데이터 분석, 개인화 마케팅을 위해서는 제대로 된 이벤트와 속성 설정이 필요하기 때문입니다. 중요한 개념인 만큼 이벤트에 대해서는 시리즈로 글을 연재할 예정입니다. 다음 글에서는 고객 여정과 이벤트를 설계하는 과정을 설명하는 글로 찾아뵙겠습니다. 감사합니다:-)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Dec 2020 21:13:00 +0900</pubDate>
+        <link>http://localhost:4000/category/marketingstory/what_is_an_event_in_digital_marketing/</link>
+        <guid isPermaLink="true">http://localhost:4000/category/marketingstory/what_is_an_event_in_digital_marketing/</guid>
+        
+        <category>디지털 마케팅</category>
+        
+        <category>이벤트</category>
+        
+        <category>매개변수</category>
+        
+        
+      </item>
     
       <item>
         <title>구글 애널리틱스 4(GA4)에서 utm_content, utm_term 추적하기</title>
