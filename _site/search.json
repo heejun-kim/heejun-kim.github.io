@@ -1,10 +1,18 @@
 [
   
     {
+      "title"    : "구글 애널리틱스 4(GA4) 전환 설정하고 구글 애즈 공유하기",
+      "category" : "",
+      "tags"     : "구글 애널리틱스 4, 구글 애즈, and 전환",
+      "url"      : "/category/marketingstory/set_up_google_analytics_4(ga4)_conversion_and_share_google_ads/",
+      "date"     : "3 Jan, 2021"
+    } ,
+  
+    {
       "title"    : "구글 애널리틱스 4(GA4)와 구글 애즈를 연결하고 잠재고객 만들기",
       "category" : "",
       "tags"     : "구글 애널리틱스 4, 구글 애즈, and 잠재고객",
-      "url"      : "/category/marketingstory/connect_google_analytics4(GA4)_and_google_ads_and_create_audiences/",
+      "url"      : "/category/marketingstory/connect_google_analytics4(ga4)_and_google_ads_and_create_audiences/",
       "date"     : "1 Jan, 2021"
     } ,
   
