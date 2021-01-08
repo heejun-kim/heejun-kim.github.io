@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /category/marketingstory/set_up_google_analytics_4(ga4)_conversion_and_share_google_ads/
+permalink: /category/marketingstory/set-up-google-analytics-4(ga4)-conversion-and-share-google-ads/
 title: "구글 애널리틱스 4(GA4) 전환 설정하고 구글 애즈 공유하기"
 date: 2021-01-03 19:13:00 +09:00
 image : posts/12/share_google_analytics_4_conversion_to_google_ads.png

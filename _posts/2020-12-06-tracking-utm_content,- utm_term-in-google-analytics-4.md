@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /category/marketingstory/tracking_utm_content,_utm_term_in_google_analytics_4/
+permalink: /category/marketingstory/tracking-utm-content,-utm-term-in-google-analytics-4/
 title: "구글 애널리틱스 4(GA4)에서 utm_content, utm_term 추적하기"
 date: 2020-12-06 17:13:00 +09:00
 image : posts/09/google_analytics4_setting_utm_content_utm_term.png

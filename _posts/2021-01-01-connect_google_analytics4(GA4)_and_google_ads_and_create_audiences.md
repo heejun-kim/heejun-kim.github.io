@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /category/marketingstory/connect_google_analytics4(ga4)_and_google_ads_and_create_audiences/
+permalink: /category/marketingstory/connect-google-analytics4(ga4)-and-google-ads-and-create-audiences/
 title: "구글 애널리틱스 4(GA4)와 구글 애즈를 연결하고 잠재고객 만들기"
 date: 2021-01-01 21:13:00 +09:00
 image : posts/11/google_analytics4_google_ads_connect.png

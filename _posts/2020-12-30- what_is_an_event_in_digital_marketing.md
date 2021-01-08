@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /category/marketingstory/what_is_an_event_in_digital_marketing/
+permalink: /category/marketingstory/what-is-an-event-in-digital-marketing/
 title: "디지털 마케팅에서 이벤트란?"
 date: 2020-12-30 21:13:00 +09:00
 image : posts/10/digitalmartketing_event.png
