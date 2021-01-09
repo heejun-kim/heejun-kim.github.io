@@ -116,9 +116,11 @@ layout: default
   </div>
 
   <script type="text/javascript">
+    var pagetitle = document.title;
+    var posttile = pagetitle.split('-');
   dataLayer.push({
     'event':'post_view',
-    'posttitle' : '{{ page.title | escape }}'
+    'posttitle' : 'posttile'
 });
  </script>
  <script>
