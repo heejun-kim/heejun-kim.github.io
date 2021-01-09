@@ -116,5 +116,11 @@ layout: default
   </div>
 
   <script type="text/javascript">
-  dataLayer.push({'event':'post_view'});
+  dataLayer.push({
+    'event':'post_view',
+    'posttitle' : '{{ page.title | escape }}'
+});
+  dataLayer.push({
+    'location' : 'post'
+  })
  </script>
