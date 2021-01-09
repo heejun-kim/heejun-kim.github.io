@@ -116,9 +116,7 @@ layout: default
   </div>
 
   <script type="text/javascript">
-    var pagetitle = document.title;
-var posttitlesplit = pagetitle.split('-');
-var posttitle = posttitlesplit[0];
+    var posttitle = '{{page.title}}';
   dataLayer.push({
     'event':'post_view',
     'posttitle' : posttitle
