@@ -116,10 +116,9 @@ layout: default
   </div>
 
   <script type="text/javascript">
-    var posttitle = '{{page.title}}';
   dataLayer.push({
     'event':'post_view',
-    'posttitle' : posttitle
+    'posttitle' : {{page.title}}
 });
  </script>
  <script>
