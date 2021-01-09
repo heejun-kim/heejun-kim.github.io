@@ -117,7 +117,8 @@ layout: default
 
   <script type="text/javascript">
     var pagetitle = document.title;
-    var posttile = pagetitle.split('-');
+    var posttilesplit = pagetitle.split('-');
+    var posttile = posttitlesplit[0];
   dataLayer.push({
     'event':'post_view',
     'posttitle' : 'posttile'
