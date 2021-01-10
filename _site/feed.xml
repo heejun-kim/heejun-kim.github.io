@@ -5,9 +5,141 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jan 2021 00:36:49 +0900</pubDate>
-    <lastBuildDate>Sun, 10 Jan 2021 00:36:49 +0900</lastBuildDate>
+    <pubDate>Sun, 10 Jan 2021 22:35:14 +0900</pubDate>
+    <lastBuildDate>Sun, 10 Jan 2021 22:35:14 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>모바일 어트리뷰션의 성과 측정 수단과 기술에 대해 알아보자</title>
+        <description>&lt;p&gt;안녕하세요
+오늘 글은 지난번 썼던 &lt;a href=&quot;https://heejun.kim/category/marketingstory/what-is-mobile-attribution-and-why-should-you-use-it&quot;&gt;모바일 어트리뷰션은 무엇이고 왜 써야할까?&lt;/a&gt; 에서 이저지는 글입니다. 이번 글에서는 모바일 어트리뷰션이 어떻게 정확하게 기여 성과를 측정하는지 차근차근 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;모바일-어트리뷰션의-기여측정-수단&quot;&gt;모바일 어트리뷰션의 기여측정 수단&lt;/h2&gt;
+
+&lt;p&gt;모바일 어트리뷰션의 기여측정 수단 대부분의 모바일 어트리뷰션은 리퍼러, 광고식별자, 핑거프린트, Click ID라는 4가지의 수단을 정확한 기여성과를 측정하기 위해 사용하고 있습니다. 중요한 개념이므로 하나하나 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-리퍼러referrer&quot;&gt;1. 리퍼러(Referrer)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구글 플레이스토어에서만 사용이 가능합니다.&lt;/li&gt;
+  &lt;li&gt;만약 리퍼러 안에 Click ID가 있다면 CliCK ID 매칭 방식을 우선 사용합니다.&lt;/li&gt;
+  &lt;li&gt;구글을 통해서 리퍼러를 재확인받기 때문에 광고주, 매체 모두 결과를 신뢰할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;정상적인 환경에서는 리퍼러가 유실될 우려가 없기 때문에 어트리뷰션 정확도가 매우 높습니다.&lt;/li&gt;
+  &lt;li&gt;웹에서 플레이스토어 사이트에 접속하여 설치한 경우에는 적용이 불가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;리퍼러가-전달되는-과정&quot;&gt;리퍼러가 전달되는 과정&lt;/h4&gt;
+
+&lt;p&gt;광고클릭 -&amp;gt; 모바일 어트리뷰션 -&amp;gt; 플레이 스토어 -&amp;gt; 앱 실행 -&amp;gt; 모바일 어트리뷰션&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;트래킹 URL이 있는 광고 클릭&lt;/li&gt;
+  &lt;li&gt;모바일 어트리뷰션에서 리퍼러를 추가하여 플레이 스토어로 유저 리다이렉트&lt;/li&gt;
+  &lt;li&gt;플레이 스토어로 유저 앱 다운로드&lt;/li&gt;
+  &lt;li&gt;유저 앱 실행할 때 해당 유저의 리퍼러를 검출하여 모바일 어트리뷰션으로 전달&lt;/li&gt;
+  &lt;li&gt;광고클릭 때 발생했던 리퍼러와 앱 실행 때 발생했던 리퍼러를 대조하여 기여성과 측정&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2-click-id-매칭&quot;&gt;2. Click ID 매칭&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;각 광고 클릭에 부여되는 고유한 Click ID를 기준으로 기여성과를 측정합니다. &lt;/li&gt;
+  &lt;li&gt;1개의 클릭마다 고유의 식별자를 붙이는 방법을 활용합니다.&lt;/li&gt;
+  &lt;li&gt;CliCK ID를 제공하지 않는 매체에서는 사용이 불가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;click-id가-전달되는-과정&quot;&gt;Click ID가 전달되는 과정&lt;/h4&gt;
+
+&lt;p&gt;광고클릭 -&amp;gt; 모바일 어트리뷰션 -&amp;gt; 스토어 -&amp;gt; 앱 실행 -&amp;gt; 모바일 어트리뷰션&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;광고를 클릭하면 Click ID를 모바일 어트리뷰션에 전달&lt;/li&gt;
+  &lt;li&gt;모바일 어트리뷰션에서 리퍼러에 Click ID를 추가하여 스토어로 유저 리다이렉트&lt;/li&gt;
+  &lt;li&gt;스토어로 유저 앱 다운로드&lt;/li&gt;
+  &lt;li&gt;유저 앱 실행할 때 해당 유저의 리퍼러를 검출하여 모바일 어트리뷰션으로 전달&lt;/li&gt;
+  &lt;li&gt;앱에서 전달된 리퍼러에서 Click ID를 추출한 뒤 광고 클릭으로 발생한 Click ID와 앱 실행으로 발생한 Click ID를 대조하여 기여성과 측정&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;3-광고식별자&quot;&gt;3. 광고식별자&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Android, IOS 디바이스가 가지고 있는 고유의 식별자입니다.&lt;/li&gt;
+  &lt;li&gt;Android는 ADID, IOS는 IDFA라고 정의합니다. &lt;/li&gt;
+  &lt;li&gt;광고식별자는 재설정이 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;광고식별자가-전달되는-과정&quot;&gt;광고식별자가 전달되는 과정&lt;/h4&gt;
+
+&lt;p&gt;광고클릭 -&amp;gt; 모바일 어트리뷰션 -&amp;gt; 스토어 -&amp;gt; 앱 실행 -&amp;gt; 모바일 어트리뷰션&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;광고를 클릭하면 광고 식별자가 파라미터에 추가&lt;/li&gt;
+  &lt;li&gt;모바일 어트리뷰션에서 광고 식별자가 포함된 데이터를 수집하고 스토어로 유저 리다이렉트&lt;/li&gt;
+  &lt;li&gt;스토어로 유저 앱 다운로드&lt;/li&gt;
+  &lt;li&gt;유저 앱 실행할 때 해당 유저의 디바이스 광고 식별자를 수집하여 트래커로 전송&lt;/li&gt;
+  &lt;li&gt;앱에서 전달된 광고 식별자와 광고 클릭으로 발생한 광고 식별자를 대조하여 기여성과 측정&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;idfa는-ios-14-업데이트로-인한-이슈가-있다&quot;&gt;IDFA는 IOS 14 업데이트로 인한 이슈가 있다!?&lt;/h4&gt;
+
+&lt;p&gt;이미 아시는 분들은 아시겠지만, 간단히 설명하고 넘어가겠습니다. 애플은 IOS 14로 업데이트를 하면서 IDFA 수집에 대한 조건을 강화한다고 발표했습니다. 원래는 IOS14로 업데이트 후 바로 적용한다고 했으나 현재는 많은 반발로 유예된 상태입니다. 2021년 초에 적용을 시작한다고 했는데 아직 적용되지는 않은 것 같습니다. &lt;br /&gt;&lt;strong&gt;IOS 14부터는 광고 식별자인 IDFA를 수집하기 위해서는 앱 내에서 사용자가 동의하는 경우만 가능&lt;/strong&gt;합니다. 해당 정책이 적용된 뒤 &lt;strong&gt;앱에 IDFA 동의를 위한 팝업을 띄우지 않고 수집을 한다면 앱스토어에서 퇴출 조치&lt;/strong&gt;를 시행한다고 합니다. 이 정책이 실행되면 IDFA가 수집되는 비율은 매우 낮아질 것으로 예상되며 이는 광고를 최적화하는데 매우 큰 영향을 끼칠 것으로 보입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://convrsion.co/2020/10/18/ios-%ec%a0%95%ec%b1%85-%eb%b3%80%ed%99%94%ea%b0%80-%eb%82%b4-%ec%ba%a0%ed%8e%98%ec%9d%b8%ec%97%90-%eb%af%b8%ec%b9%98%eb%8a%94-%ec%98%81%ed%96%a5%ec%9d%80/&quot;&gt;IDFA 관련 자세히 알아보기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IOS 14 관련 잘 정리되어있는 사이트를 공유드릴테니 꼭 확인해보시기 바랍니다!&lt;/p&gt;
+
+&lt;h4 id=&quot;4-핑거프린트fingerprint&quot;&gt;4. 핑거프린트(fingerprint)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;고유식별자까지 수집이 불가능한 경우에 활용합니다.&lt;/li&gt;
+  &lt;li&gt;IP주소, OS, 브라우저 정보,통신사 등 합법적으로 공개된 정보들을 활용하여 매칭합니다.&lt;/li&gt;
+  &lt;li&gt;가장 정확도가 낮습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;핑거프린트가-전달되는-과정&quot;&gt;핑거프린트가 전달되는 과정&lt;/h4&gt;
+
+&lt;p&gt;광고클릭 -&amp;gt; 모바일 어트리뷰션 -&amp;gt; 스토어 -&amp;gt; 앱 실행 -&amp;gt; 모바일 어트리뷰션&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;광고를 클릭하면 모바일 어트리뷰션으로 이동&lt;/li&gt;
+  &lt;li&gt;모바일 어트리뷰션에서 핑거프린트에 활용되는 정보를 수집하고 스토어로 유저 리다이렉트&lt;/li&gt;
+  &lt;li&gt;스토어로 유저 앱 다운로드&lt;/li&gt;
+  &lt;li&gt;유저 앱 실행할 때 해당 유저의  핑거프린트 정보 수집하여 모바일 어트리뷰션으로 전송&lt;/li&gt;
+  &lt;li&gt;앱에서 전달된 광고 핑거프린트 정보와 광고 클릭으로 발생한 핑거프린트 정보를 대조하여 기여성과 측정&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;광고의-성과-유효-기간은-어떻게-측정할까&quot;&gt;광고의 성과 유효 기간은 어떻게 측정할까?&lt;/h2&gt;
+
+&lt;p&gt;룩백윈도우(Loockback window)를 바탕으로 측정합니다. 룩백윈도우는 매체별 기본 기여 기간으로 변경이 가능합니다.  클릭과 조회를 기준으로 다르게 설정할 수 있으며 클릭이냐 조회이냐에 따라 ‘클릭 쓰루 룩백윈도우’, ‘조회 쓰루 룩백윈도우’로 칭합니다. 모바일 어트리뷰션에서는 광고 매체에서 설정한 기여기간과 동일하게 설정할 것을 권장합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;대표적인-앱-광고-매체의-룩백윈도우-기간클릭--조회&quot;&gt;대표적인 앱 광고 매체의 룩백윈도우 기간(클릭 / 조회)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구글 : 30 / 1 &lt;/li&gt;
+  &lt;li&gt;페이스북 : 28 / 1 &lt;br /&gt;페이스북의 경우 28일 기여기간 설정이 없어진다는 얘기가 있었는데 아직 없어지지는 않은 것 같습니다.&lt;/li&gt;
+  &lt;li&gt;트위터 : 14 / 1&lt;/li&gt;
+  &lt;li&gt;애플서치치애즈 : 30 / 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;광고-매체는-어트리뷰션에게-어떻게-성과에-대한-정보를-받을까&quot;&gt;광고 매체는 어트리뷰션에게 어떻게 성과에 대한 정보를 받을까?&lt;/h2&gt;
+
+&lt;p&gt;포스트백이라는 과정을 통해 광고 매체에 성과가 전달됩니다. &lt;strong&gt;포스트백은 어트리뷰션이 어트리뷰션 수단을 바탕으로 파악한 각 매체의 성과를 매체사에 전송하여 얼마만큼의 광고 성과가 발생했는지 알게 해주는 기술&lt;/strong&gt;입니다. 어트리뷰션이 리퍼러, Click ID 매칭, 광고 식별자, 핑거프린트로 각 매체의 성과가 판단되면 자동으로 정보를 매체에 전달합니다.&lt;br /&gt;포스트백을 사용하기 위해서는 사용자가 매체별로 직접 매체와 어트리뷰션을 연결해줘야 합니다. 연결 방법은 다 다르니 추후 각자 쓰시게 될 툴에 맞게 적용하시면 됩니다. 기존의 포스트백은 실시간으로 전달되지 않는 문제점이 있었으나 현재는 Real-time-postback이 적용되어 실시간으로 앱에서 발생한 사용자의 행동을 전달하고 이를 사용해 광고를 최적화하는 것이 가능해졌습니다.&lt;/p&gt;
+
+&lt;p&gt;두 개의 글로 모바일 어트리뷰션에서 어트리뷰선이 의미하는 뜻, 어트리뷰션을 사용해야 하는 이유, 어트리뷰션의 성과 측정 수단, 어트리뷰션이 정확한 성과 측정을 도와주는 기술을 알아봤습니다. 비록 외부에서는 직접 툴을 사용해볼 수는 없지만, &lt;strong&gt;본질과 사용하는 이유를 이해하고 나면 쉽게 적응&lt;/strong&gt;하실 수 있을 거라 생각합니다.
+감사합니다:-)&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Jan 2021 18:13:00 +0900</pubDate>
+        <link>http://localhost:4000/category/marketingstory/learn-about-the-method-and-techniques-for-measuring-performance-in-mobile-attribution/</link>
+        <guid isPermaLink="true">http://localhost:4000/category/marketingstory/learn-about-the-method-and-techniques-for-measuring-performance-in-mobile-attribution/</guid>
+        
+        <category>모바일어트뷰션</category>
+        
+        <category>어트리뷰션수단</category>
+        
+        <category>포스트백</category>
+        
+        
+      </item>
     
       <item>
         <title>모바일 어트리뷰션은 무엇이고 왜 써야할까?</title>
