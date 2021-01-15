@@ -5,9 +5,129 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jan 2021 22:35:14 +0900</pubDate>
-    <lastBuildDate>Sun, 10 Jan 2021 22:35:14 +0900</lastBuildDate>
+    <pubDate>Fri, 15 Jan 2021 18:42:33 +0900</pubDate>
+    <lastBuildDate>Fri, 15 Jan 2021 18:42:33 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>IOS 14로 인한 페이스북의 변화에 디지털 마케터는 어떻게 대처해야할까?</title>
+        <description>&lt;p&gt;안녕하세요&lt;br /&gt;
+작년부터 뜨거웠던 IOS 14 개인정보보호 정책에 관련해서 페이스북의 대응책과 변경사항이 최근 세미나를 통해 어느 정도 확정이 되었습니다. 어떤 것들이 변하고 디지털 마케터는 어떻게 대응해야 하는지 한 번 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;ios-14가-디지털-마케팅에-영향을-끼치는-이유&quot;&gt;IOS 14가 디지털 마케팅에 영향을 끼치는 이유&lt;/h2&gt;
+
+&lt;p&gt;가장 큰 문제는 IDFA(IOS 기기의 광고식별자)의 수집이 까다로워진다는 것입니다. IDFA 수집 방식이 기존의 ‘&lt;strong&gt;기본적으로 수집을 할 수 있었으나, 사용자가 수집 거부를 할 수 있었던&lt;/strong&gt;’ opt-out 방식에서 ‘&lt;strong&gt;기본적으로 수집을 할 수 없고, 사용자가 수집을 허용해 줄 수 있는&lt;/strong&gt;’ opt-in 방식으로 바꿉니다.&lt;br /&gt;
+opt-in 방식으로 바뀐 뒤 IDFA를 수집하기 위해서는 ATT(AppTrackingTransparency 팝업을 앱 내에 띄워 동의를 받아야만 합니다. 만약 &lt;strong&gt;이를 어길시 애플은 앱스토어에서 앱을 퇴출한다고 경고&lt;/strong&gt;하고 있습니다. 웹에서 별도의 절차를 통해 추적을 허가한 경우에도 ATT 요청을 거부하면 추적이 불가능합니다. 그나마 다행히도 ATT 요청을 표시하기 전 ‘추적 허가 요청’에 대한 추가 설명을 하는 것을 허락하고 있기 때문에 동의율을 올리기 위한 전략을 세우는 것이 가능합니다. &lt;br /&gt;이제 opt-in 방식은 피할 수 없으며 디지털 마케터와 개발자, 디자이너는 협력하여 &lt;strong&gt;서비스에 맞는 팝업 노출 타이밍과 적절한 ‘추적 허가 요청’ 사유에 대한 콘텐츠 실험을 진행&lt;/strong&gt;해야 합니다. 디자이너와 함께 보면 좋을 애드저스트의 글을 공유해 드리니 꼭 보시거나 ui/ux 디자이너에게 공유하시길 권유 드립니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.adjust.com/ko/blog/getting-the-opt-in&quot;&gt;IOS 14에서 데이터 수집에 대한 동의를 받기 위한 전략&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ios-14로-인한-페이스북의-변화&quot;&gt;IOS 14로 인한 페이스북의 변화&lt;/h2&gt;
+
+&lt;h4 id=&quot;1-페이스북--인스타그램에-애플-att-팝업-적용&quot;&gt;1. 페이스북 &amp;amp; 인스타그램에 애플 ATT 팝업 적용&lt;/h4&gt;
+
+&lt;p&gt;앱스토어에서 앱을 퇴출한다고 하니 페이스북도 별수 없나 봅니다. 페이스북과 인스타그램에 ATT를 적용하기로 했습니다. 만약 &lt;strong&gt;우리 앱에서 IDFA 수집에 동의하였다 해도 페이스북이나 인스타그램에서 IDFA 제공에 동의하지 않았다면 광고주는 한정적인 정보만을 받을 수밖에 없습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-애플의-skadnetwork-api를-앱-전환-캠페인에-적용&quot;&gt;2. 애플의 SKAdNetwork API를 앱 전환 캠페인에 적용&lt;/h4&gt;
+
+&lt;p&gt;SKadNetwork는 이번 IOS 14 이슈로 생긴 것이 아닌 2018년에 소개되었던 개인 정보가 보호되는 애플의 모바일 어트리뷰션입니다. 다만 기존 어트리뷰션들에 비해 딱히 이득이 없었으므로 사용되지 않았습니다. 하지만 IOS 14의 출시로 IDFA 수집이 어려워지면서 이에 대한 대안으로 부상하고 있으며 이미 많은 모바일 어트리뷰션이 SKadNetwork와의 연동을 끝낸 상태입니다. SKadNetwork가 가지고 있는 특징은 페이스북에도 영향을 미칩니다. 하나씩 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 인스톨과 이벤트에 대한 포스트백이 실시간으로 전달되지 않습니다&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;페이스북에서는 인스톨의 경우 24~48 시간, 이벤트의 경우 인스톨 후 최대 3일까지 포스트백이 지연될 수 있다고 말합니다. 즉 SKadNetwork API에서 페이스북에 포스트백을 한 시점에야 우리는 해당 광고 캠페인에서 앱설치가 발생했다는 것을 알 수 있습니다. &lt;strong&gt;실시간으로 분석하는 것은 이제 불가능합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 캠페인 수준에서 집계된 결과만 확인할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;기본적으로 SKadNetwork는 유저가 아닌 캠페인을 기준으로 합산하여 성과를 측정합니다. 따라서 &lt;strong&gt;하나의 캠페인에 단일 광고 세트와 광고로 구성된 캠페인이 아니라면 캠페인 단위로 합산된 성과만 측정이 가능&lt;/strong&gt;합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) 개인 정보와 관련된 분석 데이터가 지원되지 않습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;앱 설치 및 앱 전환 캠페인에서는 &lt;strong&gt;연령, 성별, 지역, 노출 위치와 같은 정보들이 보고서에 지원되지 않습니다&lt;/strong&gt;. 이 변경사항은 IOS 14 기기의 문제이기 때문에 앱뿐만 아니라 웹에도 마찬가지로 적용이 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) 캠페인의 기여기간이 계정 수준이 아닌 광고 세트 수준에서 설정됩니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SKadNetwork는 조회 기준으로는 기여기간이 제공되지 않고 오직 &lt;strong&gt;광고를 클릭했을 때만 어트리뷰션 과정이 시작&lt;/strong&gt;됩니다. 그 때문에 광고주는 기존 페이스북이 제공하는 계정 수준의 기여 기간을 설정할 수 없으며 캠페인 또는 광고 세트별로 기여 기간을 설정할 필요성이 생겼습니다.&lt;br /&gt; 따라서 IOS 14 변경 사항이 적용되면 이제 페이스북에서는 광고 세트 수준에서 기여 기간을 설정할 수 있습니다. &lt;strong&gt;SKAdNetwork API를 사용하는 경우는 기여 설정에 자동으로 ‘From Apple’s SKAdNetwork API’가 표시&lt;/strong&gt;될 예정이며 IOS 14 캠페인이 아니어도 광고 세트별로 기여 기간을 설정하는 것이 가능해질 예정입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) IOS 14 앱 설치 캠페인은 따로 만들어져야 합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SKAdNetwork API의 보고 제한으로 인해 IOS 14 앱 설치 캠페인은 따로 만들어져야 합니다. 또한 다음과 같은 제한 사항을 가지고 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앱은 하나의 광고 계정에만 연결될 수 있습니다. 연결에만 제한이 있을 뿐 여러 앱에 대한 광고 게재는 가능합니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;IOS 14 캠페인은 한 번에 9개까지만 진행할 수 있습니다. 허용된 9개의 캠페인 중 하나를 비활성 하거나 삭제한 후 재설정 기간인 72시간이 지나야 해당 캠페인이 한도에 포함되지 않습니다. 이는 SKAdNetwork의 포스트백이 최대 72시간까지 늦게 전달될 수 있기 때문입니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;광고 세트는 캠페인당 5개까지만 허용되며 같은 캠페인에서 여러 광고 세트의 최적화 옵션을 다르게 선택할 수 없습니다.&lt;/li&gt;&lt;br /&gt;
+    &lt;li&gt;캠페인을 게시한 후에는 껐다 켰다 하는 행위는 불가능하며 비활성 하거나 삭제만 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-ios-14에-대응하는-버전의-sdk-출시&quot;&gt;3. IOS 14에 대응하는 버전의 SDK 출시&lt;/h4&gt;
+
+&lt;p&gt;애플의 SKAdNetowrk API를 지원하며 앱 설치 광고를 측정할 수 있는 SDK 8.1 버전이 나왔으며 IOS 14 변경사항이 적용되기 전에 업데이트할 것을 권장하고 있습니다. 만약 아직 업데이트를 진행하지 않았다면 반드시 업데이트를 진행해야 합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;4-집계된-이벤트-측정-도입&quot;&gt;4. 집계된 이벤트 측정 도입&lt;/h4&gt;
+
+&lt;p&gt;애플은 PCM(Private Click Measurement)이라는 새로운 웹 측정 방법을 만들었습니다. &lt;strong&gt;PCM은 앱과 웹 사이에서 발생한 전환을 측정하는 것이 불가능하고 크로스 도메인을 추적하는 것이 불가능&lt;/strong&gt;합니다. 이에 대한 대책으로 페이스북에서는 ‘집계된 이벤트 측정’을 대책으로 내놓았습니다. AEM(Aggregated Event Measur PCM의 한계점을 완벽하게 극복해주지는 않지만, 크로스 플랫폼, 크로스 도메인 추적이 가능합니다. AEM에 대해서는 많은 정보가 나와 있지 않아 추후 추가하도록 하겠습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;5-웹에서-1개의-도메인에-전환-이벤트는-최대-8개만-사용-가능&quot;&gt;5. 웹에서 1개의 도메인에 전환 이벤트는 최대 8개만 사용 가능&lt;/h4&gt;
+
+&lt;p&gt;이 변화는 IOS에만 한정된 변화가 아닙니다. 문서에는 모호하게 표현되어 있지만 이번 있었던 웨비나의 자료에는 ‘All Facebook Advertisers(both IOS and Android dominant) can expect changes in business tool set up’이라고 표현하며 &lt;strong&gt;모든 광고주에게 해당하는 변화&lt;/strong&gt;임을 말해줍니다. 자세히 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 1개의 도메인에는 전환 이벤트가 8개 이내로 사용하도록 제한됩니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;맞춤 이벤트만 8개 이내로 제한하는 것이 아니고 표준 이벤트와 맞춤 이벤트를 합쳐서 총 8개로 전환 이벤트가 제한됩니다. 당연히 &lt;strong&gt;기본 페이지뷰 이벤트도 이 8개의 이벤트에 포함&lt;/strong&gt;이 됩니다. 애플이 ATT 적용을 의무화한 시점부터 적용이 되며 이벤트 관리자에서 8개의 이벤트를 선택하기 때문에 픽셀이나 전환 API의 구현은 변경할 필요가 없습니다. 요약하면 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;우선순위를 정한 8개의 이벤트만 광고 세트 최적화를 위해 사용 가능합니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;우선순위에 들지 못한 이벤트로 최적화하고 있는 광고 세트는 일시 중단됩니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;사용자가 페이스북, 인스타그램에서 데이터 수집을 거절하면 '구매' 같은 가장 우선순위가 높은 이벤트만 보고가 됩니다.&lt;/li&gt;&lt;br /&gt;
+    &lt;li&gt;사용자가 페이스북, 인스타그램에서 데이터 수집을 수락해도 예전처럼 무제한으로 이벤트가 수집되는 것이 아닌 우선순위가 정해진 8개의 이벤트만 수집이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;페이스북이 발표한 자료에 따르면 &lt;strong&gt;8개의 이벤트를 제외하고는 캠페인 최적화뿐만 아니라 보고를 위해서도 이벤트가 비활성화&lt;/strong&gt;된다고 합니다. 또한 우선순위를 정한 이벤트 외에는 수집도 되지 않기 때문에 맞춤 타겟에 활용할 수 있는 픽셀 이벤트의 개수도 함께 제한될 것으로 보입니다.&lt;br /&gt;따라서 현재 &lt;strong&gt;8개를 초과하는 이벤트로 광고 보고서를 확인하고 광고를 최적화하고 있다면 애플이 ATT 적용을 의무화하기 전까지 픽셀 매개변수를 활용하여 이벤트를 통합할 필요가 있습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 도메인 인증을 진행 해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;전환 이벤트가 도메인을 기준으로 결정되기 때문에 모든 비즈니스는 이제 도메인 인증을 진행해야 합니다. 페이스북 웨비나에서도 현재 웹 서비스가 있는 광고주가 가장 먼저 할 일로 도메인 인증을 얘기했습니다. 도메인 인증을 하는 경로는 다음과 같습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;비즈니스 관리자 - 비즈니스 설정 - 브랜드 가치 보호 - 도메인&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;도메인 인증에 어려움을 겪으신다면 아래 페이스북 공식 가이드를 보고 진행해보시길 바랍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/docs/sharing/domain-verification&quot;&gt;페이스북 도메인 인증 공식 가이드&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;만약 대행사를 사용하고 계신다면 인증된 도메인 또한 자산으로 공유를 해줘야합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;6-설정-가능한-기여기간의-변경&quot;&gt;6. 설정 가능한 기여기간의 변경&lt;/h4&gt;
+
+&lt;p&gt;작년부터 이야기가 있었던 기여 기간 변경에 대한 사항도 확정이 되었습니다. 28일 클릭 기여 기간, 28일 조회 기여 기간, 7일 조회 기여 기간이 더는 지원되지 않습니다. 앞으로는 1일 클릭, 7일 클릭, 1일 클릭 및 1일 조회, 7일 클릭 및 1일 조회 총 4개의 기여 기간 설정이 가능합니다. 이 중 &lt;strong&gt;기본적인 기여 기간 설정은 ‘7일 클릭’&lt;/strong&gt; 입니다. 자세한 내용을 요약해보겠습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;변경 사항이 적용되면 활성화 되어있는 광고 캠페인은 7일 클릭 기여기간이 설정됩니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;비활성화 캠페인은 계정 수준의 기여 기간을 사용해 보고되며, 더 이상 지원하지 않는 기여 기간의 이전 데이터는 광고 인사이트 API를 통해 계속 엑세스 가능합니다.&lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;없어지는 기여 기간의 데이터를 미리 내보내기로 추출하는 것을 권장합니다.&lt;/li&gt;&lt;br /&gt;
+    &lt;li&gt;비교 기간 기능을 활용해 변경되는 기여 기간으로 설정되는 경우 전환이 어떻게 변하는지 미리 확인하고 예측할 수 있습니다. 비교 기간은 열 맞춤 설정에서 확인하는 것이 가능합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;페이스북에서는 애플이 ATT를 의무로 적용하기 전에 기여 기간 변경 사항이 적용될 수 있다고 말할 수 있습니다. &lt;strong&gt;현재 없어질 기여 설정을 기본으로 사용하고 있다면 비교 기간 기능을 활용해 새로 바뀔 기여 기간에 맞는 데이터를 하루빨리 분석할 필요가 있습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;아직은 모르는 것이 많지만 시대가 개인정보에 대해 민감해지고 있으며 앞으로 쉽게 고객의 정보를 수집하여 개인화된 광고를 진행하는 것은 점점 어려워질 것으로 보입니다. 구글의 크롬 역시 늦어도 2022년 써드 파티 쿠키 지원 중단을 앞둔 상황에서 Android의 광고 식별자인 ADID 역시 언젠가는 opt-in 방식으로 수집될 가능성이 있다고 봅니다.&lt;br /&gt;
+이런 상황에 &lt;strong&gt;효율이 떨어지는 타겟 최적화 광고와 리타게팅 광고를 대신할 수 있는 것은 이메일, 앱푸시, 알림톡 등으로 할 수 있는 CRM 마케팅&lt;/strong&gt;입니다. 요즘 이직을 준비하면서 공고를 보는데 많은 기업이 획득에만 치중하는 마케터로 퍼포먼스 마케터를, 리텐션에 집중하는 마케터로 CRM 마케터를 뽑는 것 같습니다. 개인적으로는 제가 생각하는 &lt;strong&gt;퍼포먼스 마케터는 전체 구매 여정을 관리하는 마케터&lt;/strong&gt;이기 때문에 두 직군을 나누는 것이 바람직하지 않고 추후에는 결국 합쳐져서 업무를 수행하리라 생각됩니다. &lt;br /&gt;
+긴 글 읽어주셔서 감사합니다:-)&lt;/p&gt;
+
+&lt;p&gt;페이스북 웨비나를 다시 볼 수 있는 링크를 공유드리니 한 번은 꼭 봐보시길 권장드립니다&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://register.gotowebinar.com/recording/7086856429157024519&quot;&gt;페이스북 IOS 14 대응 관련 웨비나&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Jan 2021 18:13:00 +0900</pubDate>
+        <link>http://localhost:4000/category/marketingstory/how-should-digital-marketer-cope-with-facebook-change-caused-by-ios-14/</link>
+        <guid isPermaLink="true">http://localhost:4000/category/marketingstory/how-should-digital-marketer-cope-with-facebook-change-caused-by-ios-14/</guid>
+        
+        <category>IOS 14</category>
+        
+        <category>페이스북</category>
+        
+        <category>디지털마케터</category>
+        
+        
+      </item>
     
       <item>
         <title>모바일 어트리뷰션의 성과 측정 수단과 기술에 대해 알아보자</title>
