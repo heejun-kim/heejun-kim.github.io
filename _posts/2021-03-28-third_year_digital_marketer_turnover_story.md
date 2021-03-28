@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /third_year_digital_marketer_turnover_story/
+permalink: /digital_marketer_turnover_story/
 title: "3년 차 디지털 마케터의 이직 이야기"
 date: 2021-03-28 13:30:00 +09:00
 image : posts/17/turnover_thumbnail.jpg
