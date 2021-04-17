@@ -1,0 +1,31 @@
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+  Kakao.init('02bd07c071db1509bbe0b181c72169e4');
+  var a = document.querySelector('#explain').innerText;
+  function kakaosharembti (){
+    var a = document.querySelector('#explain').innerText;
+
+  Kakao.Link.sendDefault({
+objectType: 'feed',
+content: {
+  title: '우울함 극복유형 테스트',
+  description: '우울함 피할수록 더 커집니다. 내게 맞는 우울함 극복 방법을 알아보세요.',
+  imageUrl:
+    '{{site.url}}/images/mbti/thumbnail.png',
+  link: {
+    mobileWebUrl: '{{ site.url }}{{ page.url }}?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+      webUrl : '{{ site.url }}{{ page.url }}?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+  },
+},
+buttons: [
+  {
+    title: '테스트 해보기',
+    link: {
+      mobileWebUrl: '{{ site.url }}{{ page.url }}?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+      webUrl : '{{ site.url }}{{ page.url }}?utm_soure=kakaotalk&utm_mediun=social&utm_campaign=blogshare',
+    },
+  },
+]
+});
+}
+</script>
