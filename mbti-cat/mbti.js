@@ -90,67 +90,83 @@ var testNum = {
 var result = {
   "INTJ": {
     "explain": "똑똑하고 독립적인 고양이군요!<br>노르웨이숲은 매우 빨리 배우고<br>훌륭한 사냥꾼이라<br>바이킹의 배에서 쥐를 잡는 역할을 했어요.<br>분석력이 뛰어나고 정기적으로 새로운 것을<br>배우는 것을 좋아하는 편이에요",
-    "img" : "img/intj.png"
+    "img" : "img/intj.png",
+    "cat" : "당신은 똑똑한 야옹이에요"
   },
   "INTP": {
     "explain": "지적호기심이 높은 고양이군요!<br>터키쉬 반은 호기심이 너무 많아<br>주변 상황에 관심이 많고<br>강한 실험 정신을 가지고 있어요.<br>하지만 독립적이기 때문에<br>남에게 제지당하는 상황을 좋아하지 않아요.",
-    "img" : "img/intp.png"
+    "img" : "img/intp.png",
+    "cat" : "당신은 호기심 많은 야옹이에요"
   },
   "ENTJ": {
     "explain": "외향적이고 영리한 고양이군요!<br>샴은 매우 지배적인 성격을 가지고 있어<br>자기가 원하는 것을 알리고<br>해주기를 기대하는 측면이 있어요.<br>그래서 자신이 무엇인가 필요하다면<br>끊임없이 대화하고 알리는 경향이 있어요.",
-    "img" : "img/entj.png"
+    "img" : "img/entj.png",
+    "cat" : "당신은 외향적인 야옹이에요"
   },
   "ENTP": {
     "explain": "박학다식하고 독창적인 고양이군요!<br>발리니즈는 새로운 것을 빨리 배우고<br>새롭고 독특한 방법으로<br>주변을 탐험하는 데 관심이 많아요.<br>지루한 것을 싫어하고<br>새로운 자극을 원해서 사고를 칠 수도 있어요",
-    "img" : "img/entp.png"
+    "img" : "img/entp.png",
+    "cat" : "당신은 박학다식한 야옹이에요"
   },
   "INFJ": {
     "explain": "상대방을 잘 이해하는 고양이군요!<br>러시안 블루는 내성적이지만<br>사람을 신뢰하기 시작하면 정말 다정해져요.<br>무시당하는 것을 좋아하지 않으며<br>힘들 땐 혼자만의 시간이 필요해요.",
-    "img" : "img/infj.png"
+    "img" : "img/infj.png",
+    "cat" : "당신은 이해심 깊은 야옹이에요"
   },
   "INFP": {
     "explain": "조용하지만 지적인 고양이군요!<br>버만은 성실하고 이해심이 많으며<br>자기 혼자만의 평화로운 시간을 즐겨요.<br>온순하고 침착하지만,<br>호기심이 많고 상상력이 풍부해요.",
-    "img" : "img/infp.png"
+    "img" : "img/infp.png",
+    "cat" : "당신은 지적인 야옹이에요"
   },
   "ENFJ": {
     "explain": "열정적이고 친절한 고양이군요!<br>통키니즈는 똑똑하고 사람과<br>함께 하는 것을 즐기지만 고집이 세고<br>자신의 의지가 강해요.<br>사교적이지만 비판을 받으면<br>예민하게 반응할 수 있어요",
-    "img" : "img/enfj.png"
+    "img" : "img/enfj.png",
+    "cat" : "당신은 친절한 야옹이에요"
   },
   "ENFP": {
     "explain": "활발하고 호기심 많은 고양이군요!<br>싱가푸라는 상상력과 순발력이 뛰어나고<br>호기심 많아 탐험하고 노는 것을 좋아해요.<br>누군가 아프거나 힘들 때 위로하고<br>응원할 줄 아는 친절함을 가지고 있어요",
-    "img" : "img/enfp.png"
+    "img" : "img/enfp.png",
+    "cat" : "당신은 활발한 야옹이에요"
   },
   "ISTJ": {
     "explain": "책임감이 강해 매우 충성스러운 고양이군요!<br>브리티쉬숏헤어는 지적인 고양이여서<br> 쉽고 빠르게 배우며 기억력도 좋아<br>배운 것을 즉시 기억해요.<br>소속감이 강해 같은 집단과<br>유대를 쉽게 생성해요.<br>하지만, 휴식을 하고싶을 때는<br>혼자만의 시간을 가지는 게 좋아요!",
-    "img" : "img/istj.png"
+    "img" : "img/istj.png",
+    "cat" : "당신은 충성심 깊은 야옹이에요"
   },
   "ISFJ": {
     "explain": "부드럽고 친절한 고양이군요!<br>페르시안은 질서정연하고<br>안정적인 일상을 좋아하며<br>평화롭고 고요한 환경을 선호해요.<br>우아하면서 매너가 넘치고<br>혼자만의 시간을 즐길 줄 알아요.",
-    "img" : "img/isfj.png"
+    "img" : "img/isfj.png",
+    "cat" : "당신은 부드러운 야옹이에요"
   },
   "ESTJ": {
     "explain": "기억력 좋고 활동성 있는 고양이군요!<br>드래곤 리는 지적이고<br>친절하며 책임감이 있어<br>다른 집단을 이끄는 데 재능이 있어요.<br>가만히 있지 않고 항상 더 많은 책임과<br>도전을 찾는 경향이 있어요.",
-    "img" : "img/estj.png"
+    "img" : "img/estj.png",
+    "cat" : "당신은 활동성 있는 야옹이에요"
   },
   "ESFJ": {
     "explain": "다정하고 충성스러운 고양이군요!<br>저먼렉스는 혼자 있는 시간을 좋아하지 않고<br> 사랑하는 사람들과 있는 것을 좋아해요.<br>친절하며 사람에 대한 관심이 많고<br>그들과 함께 하는 것에 행복감을 느껴요.",
-    "img" : "img/esfj.png"
+    "img" : "img/esfj.png",
+    "cat" : "당신은 다정한 야옹이에요"
   },
   "ISTP": {
     "explain": "행동 전에 데이터를 고려하는 고양이군요!<br>스라소니는 주어진 기회를 최대한<br>활용하기 위한 인내심을 가지고 있고<br>매우 신중히 행동해요.<br>또 과묵하고 분석적이지만 적응력이 강해요.<br>하지만 혼자 활동하는 것을 좋아해요.",
-    "img" : "img/istp.png"
+    "img" : "img/istp.png",
+    "cat" : "당신은 분석적인 야옹이에요"
   },
   "ISFP": {
     "explain": "온화하면서 겸손한 고양이군요!<br>아나톨리안은 큰 몸집에도 불구하고<br>매우 다정해서 '온화한 거인'이라고도 불려요.<br>하지만 활동적인 것을 좋아하며<br>다양한 장소를 탐험하는 것을 즐겨요.",
-    "img" : "img/isfp.png"
+    "img" : "img/isfp.png",
+    "cat" : "당신은 온화한 야옹이에요"
   },
   "ESTP": {
     "explain": "자신감 넘치고 활동적인 고양이군요! <br>뱅갈은 똑똑하고 호기심이 많아 <br>새로운 것에 관심이 많고 도전적이에요. <br>지루함은 최대의 적이고 <br>지루한 뱅갈은 파괴적으로 변해요.",
-    "img" : "img/estp.png"
+    "img" : "img/estp.png",
+    "cat" : "당신은 자신감 넘치는 야옹이에요"
   },
   "ESFP": {
     "explain": "장난기 많고 활기찬 고양이군요!<br>스핑크스는 모든 고양이 중<br>가장 사교적인 성격을 가지고 있어<br>치료 고양이로 사용되기도 해요.<br>삶이 지루하지 않게 외부에서의 자극과<br>흥분을 갈망하고 탐험하는 것을 좋아해요.",
-    "img" : "img/esfp.png"
+    "img" : "img/esfp.png",
+    "cat" : "당신은 활기찬 야옹이에요"
   }
 };
 
@@ -247,6 +263,7 @@ Kakao.isInitialized();
 //카카오톡 공유하기 함수
 
 var kakaoShare = function(){
+    var title = result[mbti]['cat'];
     var desc = document.querySelector('#explain').textContent;
     var imgUrl = document.querySelector('#result_img').src;
     var mbti = new URL(location.href).searchParams.get('result');
@@ -254,6 +271,7 @@ var kakaoShare = function(){
     Kakao.Link.sendDefault({
     objectType: 'feed',
     content: {
+      title:  title,
       description: desc,
       imageUrl:
         imgUrl,
