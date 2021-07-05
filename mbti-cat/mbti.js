@@ -215,6 +215,7 @@ var next = function(){
     console.log(mbti);
     document.querySelector('#explain').innerHTML = result[mbti]['explain'];
     document.querySelector('#result_img').src = result[mbti]['img'];
+    history.replaceState({ replace : mbti }, "", '?result='+mbti);
   }
   else{
     document.querySelector('#number').innerHTML = i+'/12';
@@ -228,3 +229,62 @@ var next = function(){
   }
 
 }
+
+var shareParams = new URL(location.href).searchParams.get('result');
+if(Object.keys(result).includes(shareParams)== true)
+{
+  document.querySelector('#main').style.display = "none";
+  document.querySelector('#result').style.display = "block";
+  var mbti = shareParams;
+  document.querySelector('#explain').innerHTML = result[mbti]['explain'];
+  document.querySelector('#result_img').src = result[mbti]['img'];
+}
+
+// 카카오 SDK 초기화
+Kakao.init('02bd07c071db1509bbe0b181c72169e4');
+Kakao.isInitialized();
+
+//카카오톡 공유하기 함수
+
+var kakaoShare = function(){
+    var title = "오오";
+    var desc = document.querySelector('#explain').textContent;
+    var imgUrl = document.querySelector('#result_img').src;
+    var mbti = new URL(location.href).searchParams.get('result');
+
+    Kakao.Link.sendDefault({
+    objectType: 'feed',
+    content: {
+      title:  title,
+      description: desc,
+      imageUrl:
+        imgUrl,
+      link: {
+        mobileWebUrl: 'https://heejun.kim/mbti-cat/?result='+mbti,
+      },
+    },
+    social: {
+      likeCount: 10,
+      commentCount: 20,
+      sharedCount: 30,
+    },
+    buttons: [
+      {
+        title: '결과 확인하기',
+        link: {
+          mobileWebUrl: 'https://heejun.kim/mbti-cat/?result='+mbti,
+          webUrl: 'https://heejun.kim/mbti-cat/?result='+mbti,
+        },
+      },
+      {
+        title: '나도 테스트하기',
+        link: {
+          mobileWebUrl: 'https://heejun.kim/mbti-cat/',
+          webUrl: 'https://heejun.kim/mbti-cat/',
+        },
+      },
+    ]
+  });
+  }
+
+document.querySelector('#share_btn').addEventListener('click', kakaoShare);
