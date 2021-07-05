@@ -231,6 +231,7 @@ var next = function(){
     console.log(mbti);
     document.querySelector('#explain').innerHTML = result[mbti]['explain'];
     document.querySelector('#result_img').src = result[mbti]['img'];
+    document.querySelector('#cat').innerHTML = result[mbti]['cat'];
     history.replaceState({ replace : mbti }, "", '?result='+mbti);
   }
   else{
@@ -254,6 +255,7 @@ if(Object.keys(result).includes(shareParams)== true)
   var mbti = shareParams;
   document.querySelector('#explain').innerHTML = result[mbti]['explain'];
   document.querySelector('#result_img').src = result[mbti]['img'];
+  document.querySelector('#cat').innerHTML = result[mbti]['cat'];
 }
 
 // 카카오 SDK 초기화
