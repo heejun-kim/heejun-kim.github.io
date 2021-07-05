@@ -25,6 +25,10 @@
   display : none;
 }
 
+#cat {
+    display : none;
+}
+
 body {
   background-color: #ec9327;
 }

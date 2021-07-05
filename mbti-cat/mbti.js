@@ -263,7 +263,7 @@ Kakao.isInitialized();
 //카카오톡 공유하기 함수
 
 var kakaoShare = function(){
-    var title = result[mbti]['cat'];
+    var title = document.querySelector('#cat').textContent;
     var desc = document.querySelector('#explain').textContent;
     var imgUrl = document.querySelector('#result_img').src;
     var mbti = new URL(location.href).searchParams.get('result');
