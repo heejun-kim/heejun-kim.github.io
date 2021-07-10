@@ -172,6 +172,9 @@ var result = {
 
 //테스트 시작함수
 var testStart = function(){
+  dataLayer.push({
+    'event' : 'start'
+  });
   document.querySelector('#main').style.display = "none";
   document.querySelector('#test').style.display = "block";
   next();
@@ -185,6 +188,9 @@ var retry = function(){
   document.querySelector('#test').style.display = "block";
   i = 1;
   EI.value=SN.value=TF.value=JP.value= 0;
+  dataLayer.push({
+    'event' : 'retry'
+  })
   next();
 }
 
@@ -195,10 +201,18 @@ document.querySelector('#A').addEventListener('click',function(){
   var type = document.querySelector('#type').value;
   var preValue = document.querySelector('#'+type).value;
   document.querySelector('#'+type).value = preValue+1;
+  dataLayer.push({
+  'event' : 'select_answer',
+  'answer' : 'A'
+});
   next();
 })
 
 document.querySelector('#B').addEventListener('click',function(){
+  dataLayer.push({
+  'event' : 'select_answer',
+  'answer' : 'B'
+});
   next();
 })
 
@@ -233,6 +247,11 @@ var next = function(){
     document.querySelector('#result_img').src = result[mbti]['img'];
     document.querySelector('#cat').innerHTML = result[mbti]['cat'];
     history.replaceState({ replace : mbti }, "", '?result='+mbti);
+    dataLayer.push({
+      'event' : 'test_complete',
+      'mbti' : mbti,
+      'result_name' : result[mbti]['cat']
+    })
   }
   else{
     document.querySelector('#number').innerHTML = i+'/12';
@@ -242,6 +261,10 @@ var next = function(){
     document.querySelector('#type').value = testNum[i]['type'];
     document.querySelector('#A').innerHTML = testNum[i]['A'];
     document.querySelector('#B').innerHTML = testNum[i]['B'];
+    dataLayer.push({
+      'event' : 'view_question',
+      'question_number' : i
+    });
     i++;
   }
 
@@ -265,6 +288,9 @@ Kakao.isInitialized();
 //카카오톡 공유하기 함수
 
 var kakaoShare = function(){
+    dataLayer.push({
+    'event' : 'kakaoshare'
+    })
     var title = document.querySelector('#cat').textContent;
     var desc = document.querySelector('#explain').textContent;
     var imgUrl = document.querySelector('#result_img').src;
