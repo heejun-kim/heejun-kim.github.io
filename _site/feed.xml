@@ -5,8 +5,8 @@
     <description>비전공 행정학과 학생이 디지털 마케터로 취업하고 스타트업의 마케터로 살아온 이야기</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Aug 2021 10:44:36 +0900</pubDate>
-    <lastBuildDate>Sun, 01 Aug 2021 10:44:36 +0900</lastBuildDate>
+    <pubDate>Tue, 13 Dec 2022 20:55:07 +0900</pubDate>
+    <lastBuildDate>Tue, 13 Dec 2022 20:55:07 +0900</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -1052,7 +1052,8 @@ opt-in 방식으로 바뀐 뒤 IDFA를 수집하기 위해서는 ATT(AppTracking
     
       <item>
         <title>구글 애널리틱스 4(GA4)에서 utm_content, utm_term 추적하기</title>
-        <description>&lt;p&gt;안녕하세요 오늘은 구글 애널리틱스 4를 처음 설치하고 데이터를 보려고 했을 때 가장 당황스러울 수 있는 utm_content, utm_term 매개변수가 추적되지 않는 문제를 해결해보겠습니다.&lt;/p&gt;
+        <description>&lt;p&gt;안녕하세요 오늘은 구글 애널리틱스 4를 처음 설치하고 데이터를 보려고 했을 때 가장 당황스러울 수 있는 utm_content, utm_term 매개변수가 추적되지 않는 문제를 해결해보겠습니다.&lt;br /&gt;
+구글 애널리틱스 4의 기능이 업데이트되어 2022년 7월 11일 기본 측정기준으로 수동 검색어, 수동 광고 콘텐츠가 생겼습니다. 다만 바로 확인할 수 없기 때문에 획득 보고서에 측정기준을 추가해주는 절차가 필요한데요. 추가 방법이 잘 설명된 &lt;a href=&quot;https://osoma.kr/blog/ga4-start-settings/&quot;&gt;수동 검색어, 수동 광고 콘텐츠 GA4 보고서에 추가하기&lt;/a&gt; 글을 참고하여 추가해보시길 바랍니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;utm-매개변수가-뭔가요&quot;&gt;utm 매개변수가 뭔가요?&lt;/h2&gt;
 
